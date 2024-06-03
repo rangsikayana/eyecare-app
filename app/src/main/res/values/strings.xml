@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">EyeCare</string>
+    <string name="loginimage">LoginImage</string>
+    <string name="eyecare">EyeCare</string>
+    <string name="loginDesc">Check your eye disease with AI</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="registerAcc">Register?</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="registerDesc">Create new account</string>
+    <string name="registerimage">registerImage</string>
 </resources>
