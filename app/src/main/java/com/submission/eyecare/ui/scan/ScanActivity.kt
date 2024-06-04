@@ -1,4 +1,4 @@
-package com.submission.eyecare.ui
+package com.submission.eyecare.ui.scan
 
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-import com.submission.eyecare.R
 import com.submission.eyecare.databinding.ActivityScanBinding
 import android.Manifest
 import android.util.Log

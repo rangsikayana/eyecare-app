@@ -1,11 +1,10 @@
-package com.submission.eyecare.ui
+package com.submission.eyecare.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.submission.eyecare.MainActivity
-import com.submission.eyecare.R
 import com.submission.eyecare.databinding.ActivitySplashBinding
+import com.submission.eyecare.ui.main.MainActivity
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding

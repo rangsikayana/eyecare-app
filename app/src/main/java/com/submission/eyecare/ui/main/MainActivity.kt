@@ -1,12 +1,12 @@
-package com.submission.eyecare
+package com.submission.eyecare.ui.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.submission.eyecare.databinding.ActivityMainBinding
-import com.submission.eyecare.ui.LoginActivity
-import com.submission.eyecare.ui.RegisterActivity
-import com.submission.eyecare.ui.ScanActivity
+import com.submission.eyecare.ui.auth.login.LoginActivity
+import com.submission.eyecare.ui.auth.register.RegisterActivity
+import com.submission.eyecare.ui.scan.ScanActivity
 
 class MainActivity : AppCompatActivity() {
 
