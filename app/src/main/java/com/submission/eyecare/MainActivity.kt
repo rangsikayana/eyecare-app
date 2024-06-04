@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.submission.eyecare.databinding.ActivityMainBinding
 import com.submission.eyecare.ui.LoginActivity
 import com.submission.eyecare.ui.RegisterActivity
+import com.submission.eyecare.ui.ScanActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +22,10 @@ class MainActivity : AppCompatActivity() {
         }
          binding.register.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+        binding.analyze.setOnClickListener {
+            val intent = Intent(this, ScanActivity::class.java)
             startActivity(intent)
         }
 // Sementara
