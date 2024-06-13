@@ -26,6 +26,10 @@ class UserRepos private constructor(private val userPreference: UserPreference) 
         userPreference.saveTheme(isDark)
     }
 
+    fun getPlates(): List<IshiharaPlate> {
+        return PlateData.plates
+    }
+
     companion object {
 
         @Volatile

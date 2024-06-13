@@ -5,6 +5,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.submission.eyecare.data.UserRepos
+import com.submission.eyecare.ui.colorBlindTest.PlateViewModel
 import com.submission.eyecare.utils.Injection
 
 class VMFactory private constructor(private val repo: UserRepos) : ViewModelProvider.NewInstanceFactory() {
@@ -12,6 +13,9 @@ class VMFactory private constructor(private val repo: UserRepos) : ViewModelProv
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(ProfileViewModel::class.java)) {
             return ProfileViewModel(repo) as T
+        }
+        if (modelClass.isAssignableFrom(PlateViewModel::class.java)) {
+            return PlateViewModel(repo) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
     }

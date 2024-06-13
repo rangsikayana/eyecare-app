@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.submission.eyecare.databinding.ActivityMainBinding
 import com.submission.eyecare.ui.auth.login.LoginActivity
 import com.submission.eyecare.ui.auth.register.RegisterActivity
+import com.submission.eyecare.ui.colorBlindTest.ColorTestActivity
 import com.submission.eyecare.ui.profile.ProfileActivity
 import com.submission.eyecare.ui.scan.ScanActivity
 
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.profile.setOnClickListener{
-            startActivity(Intent(this, ProfileActivity::class.java))
+            startActivity(Intent(this, ColorTestActivity::class.java))
         }
 
         binding.analyzeFeature.setOnClickListener{
