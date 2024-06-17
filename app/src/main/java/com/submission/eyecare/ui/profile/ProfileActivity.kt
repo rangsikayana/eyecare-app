@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.CompoundButton
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import com.submission.eyecare.R
 import com.submission.eyecare.data.UserPreference
@@ -32,6 +33,10 @@ class ProfileActivity : AppCompatActivity() {
             finish()
         }
 
+        binding.logoutCard.setOnClickListener{
+            setDialogOut()
+        }
+
         //setup Dark Mode
         profileViewModel.getTheme().observe(this) { isDark: Boolean ->
             if (isDark) {
@@ -46,5 +51,21 @@ class ProfileActivity : AppCompatActivity() {
             profileViewModel.saveTheme(isChecked)
         }
 
+
+    }
+
+    private fun setDialogOut() {
+        AlertDialog.Builder(this).apply {
+            setTitle("Logging Out")
+            setMessage("Confirm Logout?")
+            setPositiveButton("Logout") {_, _ ->
+                profileViewModel.logout()
+            }
+            setNegativeButton("Nope")  {dial, _ ->
+                dial.dismiss()
+            }
+            create()
+            show()
+        }
     }
 }

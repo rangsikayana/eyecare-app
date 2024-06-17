@@ -1,13 +1,19 @@
-package com.submission.eyecare.viewModels
+package com.submission.eyecare.ui.fragments.notifications
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.submission.eyecare.data.UserRepos
 import kotlinx.coroutines.launch
 
-class ProfileViewModel(private val repo: UserRepos): ViewModel() {
+class NotificationsViewModel(private val repo: UserRepos) : ViewModel() {
+
+    private val _text = MutableLiveData<String>().apply {
+        value = "This is notifications Fragment"
+    }
+    val text: LiveData<String> = _text
 
     fun getTheme(): LiveData<Boolean> {
         return repo.getTheme().asLiveData()
@@ -24,5 +30,4 @@ class ProfileViewModel(private val repo: UserRepos): ViewModel() {
             repo.saveTheme(isDark)
         }
     }
-
 }

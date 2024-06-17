@@ -1,0 +1,88 @@
+package com.submission.eyecare.ui.fragments.home
+
+import android.content.Intent
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.submission.eyecare.R
+import com.submission.eyecare.adapter.DiseaseAdapter
+import com.submission.eyecare.data.local.Diseases
+import com.submission.eyecare.databinding.FragmentHomeBinding
+import com.submission.eyecare.ui.auth.login.LoginActivity
+import com.submission.eyecare.ui.auth.register.RegisterActivity
+import com.submission.eyecare.ui.colorBlindTest.ColorTestActivity
+import com.submission.eyecare.ui.scan.ScanActivity
+
+class HomeFragment : Fragment() {
+
+    private var _binding: FragmentHomeBinding? = null
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+    private val itemList =  ArrayList<Diseases>()
+    private val disAdapter = DiseaseAdapter(itemList)
+
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        val homeViewModel =
+            ViewModelProvider(this).get(HomeViewModel::class.java)
+
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+
+        if (itemList.isEmpty()) {
+            itemList.addAll(getData())
+        }
+        setup()
+
+        binding.btnTest.setOnClickListener{
+            startActivity(Intent(requireActivity(), ColorTestActivity::class.java))
+        }
+
+        //to Access login and register
+        binding.btnLogin.setOnClickListener{
+            startActivity(Intent(requireActivity(), LoginActivity::class.java))
+        }
+
+        binding.btnRegister.setOnClickListener{
+            startActivity(Intent(requireActivity(), RegisterActivity::class.java))
+        }
+        return root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun setup() {
+        val rv = binding.DiseaseRv
+        rv.setHasFixedSize(true)
+        rv.layoutManager = LinearLayoutManager(requireActivity(), RecyclerView.HORIZONTAL, false)
+        rv.adapter = disAdapter
+    }
+
+    private fun getData(): ArrayList<Diseases> {
+        val dataDiseases = resources.getStringArray(R.array.data_disease)
+        val dataDesc = resources.getStringArray(R.array.data_desc)
+        val dataPhoto = resources.obtainTypedArray(R.array.data_icon)
+        val listDis = ArrayList<Diseases>()
+        for (i in dataDiseases.indices) {
+            val item  = Diseases(dataDiseases[i], dataDesc[i], dataPhoto.getResourceId(i, -1))
+            listDis.add(item)
+        }
+        return listDis
+    }
+}

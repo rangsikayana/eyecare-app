@@ -48,6 +48,9 @@
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.InfoActivity"
+            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
