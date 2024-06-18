@@ -4,10 +4,12 @@ import android.content.Context
 import com.submission.eyecare.data.UserPreference
 import com.submission.eyecare.data.UserRepos
 import com.submission.eyecare.data.dataStore
+import com.submission.eyecare.data.network.ApiConfig
 
 object Injection {
     fun provideRepository(context: Context): UserRepos {
         val pref = UserPreference.getInstance(context.dataStore)
-        return UserRepos.getInstance(pref)
+        val api = ApiConfig.getServices()
+        return UserRepos.getInstance(pref, api)
     }
 }

@@ -5,6 +5,8 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.submission.eyecare.data.UserRepos
+import com.submission.eyecare.ui.auth.login.LoginViewModel
+import com.submission.eyecare.ui.auth.register.RegisterViewModel
 import com.submission.eyecare.ui.colorBlindTest.PlateViewModel
 import com.submission.eyecare.ui.fragments.notifications.NotificationsViewModel
 import com.submission.eyecare.ui.splash.SplashViewModel
@@ -19,6 +21,10 @@ class VMFactory private constructor(private val repo: UserRepos) : ViewModelProv
             return SplashViewModel(repo) as T
         } else if (modelClass.isAssignableFrom(NotificationsViewModel::class.java)) {
             return NotificationsViewModel(repo) as T
+        } else if (modelClass.isAssignableFrom(LoginViewModel::class.java)) {
+            return LoginViewModel(repo) as T
+        }else if (modelClass.isAssignableFrom(RegisterViewModel::class.java)) {
+            return RegisterViewModel(repo) as T
         }
         if (modelClass.isAssignableFrom(PlateViewModel::class.java)) {
             return PlateViewModel(repo) as T

@@ -16,6 +16,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "BASE_URL", "\"https://eyecare-server-gmn2d7rrwq-et.a.run.app/\"")
     }
 
     buildTypes {
@@ -53,7 +55,11 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+
+    //Circle Img
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 
     //Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
@@ -66,5 +72,11 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
     implementation("androidx.activity:activity-ktx:1.7.2")
     implementation ("androidx.fragment:fragment-ktx:1.3.6")
+
+    //network
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+
 
 }

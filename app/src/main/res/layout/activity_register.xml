@@ -68,10 +68,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 app:startIconDrawable="@drawable/baseline_person_24">
-                <com.google.android.material.textfield.TextInputEditText
+                <com.submission.eyecare.ui.custom.CustomName
                     android:id="@+id/nameEditText"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,10 +90,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/firstNameInputLayout"
                 app:startIconDrawable="@drawable/baseline_person_24">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.submission.eyecare.ui.custom.CustomName
                     android:id="@+id/LastNameEditText"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,10 +112,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/lastNameInputLayout"
                 app:startIconDrawable="@drawable/ic_email">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.submission.eyecare.ui.custom.CustomMail
                     android:id="@+id/emailEditText"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -138,10 +138,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/emailInputLayout"
                 app:startIconDrawable="@drawable/baseline_lock_24">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.submission.eyecare.ui.custom.CustomPassword
                     android:id="@+id/passwordEditText"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:inputType="textPassword"
                     android:maxLength="16" />
             </com.google.android.material.textfield.TextInputLayout>

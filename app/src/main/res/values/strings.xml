@@ -20,6 +20,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="Format">Invalid Email Format</string>
+    <string name="Taken">Email is Taken</string>
+    <string name="Empty">This Field Should not be empty</string>
 
     <string-array name="data_disease">
         <item>Crossed</item>
