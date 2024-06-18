@@ -18,7 +18,6 @@ class CustomName : AppCompatEditText {
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        hint = "Input User Name"
         textAlignment = View.TEXT_ALIGNMENT_VIEW_START
     }
 

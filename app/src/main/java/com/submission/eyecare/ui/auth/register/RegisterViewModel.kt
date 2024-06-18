@@ -4,5 +4,5 @@ import androidx.lifecycle.ViewModel
 import com.submission.eyecare.data.UserRepos
 
 class RegisterViewModel(private val repo: UserRepos): ViewModel () {
-    fun register(email: String, password: String, firstName: String, lastName: String) = repo.register(email, password, firstName, lastName)
+    fun register(firstName: String, lastName: String, email: String, password: String ) = repo.register(firstName, lastName, email, password)
 }

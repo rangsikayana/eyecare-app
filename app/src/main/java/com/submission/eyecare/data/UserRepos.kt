@@ -56,14 +56,14 @@ class UserRepos private constructor(
     }
 
     fun register(
+        firstName: String,
+        lastName: String,
         email: String,
         password: String,
-        firstName: String,
-        lastName: String
     ) = liveData {
         emit(Result.Loading)
         try {
-            val response = api.register(email, password, firstName, lastName)
+            val response = api.register(firstName, lastName, email, password )
             val msg = response.message
             emit(Result.Success(msg))
         } catch (e: HttpException) {
