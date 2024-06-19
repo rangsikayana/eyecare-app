@@ -48,40 +48,5 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-
-        /*mainViewModel.getTheme().observe(this) { isDark: Boolean ->
-            if (isDark) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            }
-        }*/
-// Sementara
-      /*  binding.login.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
-        binding.register.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
-        }
-        binding.analyze.setOnClickListener {
-            val intent = Intent(this, ScanActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.profile.setOnClickListener{
-            startActivity(Intent(this, ColorTestActivity::class.java))
-        }
-
-        binding.analyzeFeature.setOnClickListener{
-            val intent = Intent(this, ScanActivity::class.java)
-            startActivity(intent)
-        }
-        binding.profileFeature.setOnClickListener{
-            startActivity(Intent(this, ProfileActivity::class.java))
-        }*/
-// Sementara
-
     }
 }

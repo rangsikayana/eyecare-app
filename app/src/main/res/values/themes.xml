@@ -53,4 +53,10 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="Theme.bottomBar" parent="Theme.MaterialComponents">
+        <item name="colorPrimary"> @color/md_theme_primary</item>
+        <item name="colorPrimaryDark">@color/md_theme_onSecondaryFixed</item>
+        <item name="colorAccent">@color/md_theme_primaryFixedDim</item>
+    </style>
+
 </resources>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.meds.MedicationFragment">
+
+  <androidx.appcompat.widget.SearchView
+    android:id="@+id/search_meds"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:queryHint="Search..."
+      app:iconifiedByDefault="false"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"/>
+
+ <!-- <TextView
+      android:id="@+id/Medication_header"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:text="Medications"
+      android:textSize="30sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />-->
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/meds_rv"
+      android:layout_width="match_parent"
+      android:layout_height="500dp"
+      app:layout_constraintTop_toBottomOf="@+id/search_meds"
+      tools:listitem="@layout/disease_holder"/>
+
+
+  <!--<androidx.cardview.widget.CardView
+      android:id="@+id/restCard"
+      android:layout_width="190dp"
+      android:layout_height="210dp"
+      android:layout_marginEnd="4dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      app:cardElevation="12dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/dropCard" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <ImageView
+          android:id="@+id/img_rest"
+          android:layout_width="120dp"
+          android:layout_height="100dp"
+          android:layout_marginTop="24dp"
+          android:src="@drawable/login_asset"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="32dp"
+          android:text="Rest"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/img_rest" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/dropCard"
+      android:layout_width="190dp"
+      android:layout_height="210dp"
+      android:layout_marginEnd="4dp"
+      android:layout_marginBottom="4dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="70dp"
+      app:cardElevation="12dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/Medication_header" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <ImageView
+          android:id="@+id/img_eyeDrop"
+          android:layout_width="120dp"
+          android:layout_height="100dp"
+          android:layout_marginTop="24dp"
+          android:src="@drawable/login_asset"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="32dp"
+          android:text="EyeDrops"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/img_eyeDrop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/meds_card"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="4dp"
+      android:layout_width="190dp"
+      android:layout_height="210dp"
+      app:cardElevation="12dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/dropCard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <ImageView
+          android:id="@+id/img_meds"
+          android:layout_width="120dp"
+          android:layout_height="100dp"
+          android:layout_marginTop="24dp"
+          android:src="@drawable/login_asset"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="32dp"
+          android:text="Medications"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/img_meds" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.cardview.widget.CardView>
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/surgery"
+      android:layout_marginEnd="10dp"
+      android:layout_width="190dp"
+      android:layout_height="210dp"
+      android:layout_marginTop="10dp"
+      app:cardElevation="12dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/meds_card" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <ImageView
+          android:id="@+id/img_surgery"
+          android:layout_width="120dp"
+          android:layout_height="100dp"
+          android:layout_marginTop="24dp"
+          android:src="@drawable/login_asset"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="32dp"
+          android:text="Surgery"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/img_surgery" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

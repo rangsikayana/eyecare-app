@@ -54,6 +54,9 @@
         <activity
             android:name=".ui.InfoActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.MedsActivity"
+            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

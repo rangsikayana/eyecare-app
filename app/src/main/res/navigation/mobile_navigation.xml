@@ -22,4 +22,14 @@
         android:name="com.submission.eyecare.ui.fragments.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_History"
+        android:name="com.submission.eyecare.ui.fragments.test.TestFragment"
+        android:label="Test"
+        tools:layout="@layout/fragment_test" />
+    <fragment
+        android:id="@+id/navigation_medication"
+        android:name="com.submission.eyecare.ui.fragments.meds.MedicationFragment"
+        android:label="Medication"
+        tools:layout="@layout/fragment_medication" />
 </navigation>

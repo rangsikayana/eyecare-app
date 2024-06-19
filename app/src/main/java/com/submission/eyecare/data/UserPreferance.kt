@@ -15,6 +15,7 @@ val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "se
 class UserPreference private constructor(private val dataStore: DataStore<Preferences>) {
 
     private val themeKey = booleanPreferencesKey("theme_setting")
+    private val nameKey = stringPreferencesKey("displayName")
 
     fun getTheme(): Flow<Boolean> {
         return dataStore.data.map { preferances ->
@@ -27,8 +28,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
             preferences[themeKey] = isDark
         }
     }
-
-
+    //Setup displayName and condition
     suspend fun saveSession(user: UserModel) {
         dataStore.edit { preferences ->
             preferences[EMAIL_KEY] = user.email

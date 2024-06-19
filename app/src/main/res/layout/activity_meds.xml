@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8BD0EF"
+    tools:context=".ui.MedsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <ImageView
+            android:id="@+id/img_meds"
+            android:layout_width="260dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/border"
+            android:src="@drawable/register_asset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/img_meds">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/meds_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textSize="24sp"
+                    android:text="Acetazolamide"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/meds_benefit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Overview"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/meds_header"
+                    app:layout_constraintStart_toStartOf="@+id/meds_header"/>
+
+                <TextView
+                    android:id="@+id/benefit_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas facilisis viverra augue a tincidunt. In a sem ex. Quisque rhoncus, lectus et hendrerit dapibus, enim orci consectetur nibh, id porttitor velit ipsum vitae dolor. Curabitur in rhoncus velit. Curabitur a vulputate nisi. Morbi varius, orci ut congue suscipit, erat felis pellentesque justo, sed sagittis magna arcu sed ex. Sed fermentum laoreet tortor et maximus."
+                    android:textSize="14sp"
+                    android:textAlignment="textStart"
+                    app:layout_constraintTop_toBottomOf="@+id/meds_benefit"
+                    app:layout_constraintStart_toStartOf="@+id/meds_benefit"/>
+
+                <TextView
+                    android:id="@+id/about_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="About"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/benefit_content"
+                    app:layout_constraintStart_toStartOf="@+id/benefit_content"/>
+
+
+                <TextView
+                    android:id="@+id/about_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas facilisis viverra augue a tincidunt. In a sem ex. Quisque rhoncus, lectus et hendrerit dapibus, enim orci consectetur nibh, id porttitor velit ipsum vitae dolor. Curabitur in rhoncus velit. Curabitur a vulputate nisi. Morbi varius, orci ut congue suscipit, erat felis pellentesque justo, sed sagittis magna arcu sed ex. Sed fermentum laoreet tortor et maximus."
+                    android:textSize="14sp"
+                    android:textAlignment="textStart"
+                    app:layout_constraintTop_toBottomOf="@+id/about_header"
+                    app:layout_constraintStart_toStartOf="@+id/about_header"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text=""
+                    app:layout_constraintTop_toBottomOf="@+id/about_content"
+                    app:layout_constraintStart_toStartOf="@id/about_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

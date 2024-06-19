@@ -25,7 +25,7 @@ interface ApiService {
         @Field("password") password: String,
     ) : LoginResponse
 
-    //??
+  /*  //??
     @FormUrlEncoded
     @POST("/users/{userId}/eyeHealthRecords")
     suspend fun records(
@@ -45,6 +45,6 @@ interface ApiService {
 
     //not finished
     @POST("/users/{userId}/eyeImages")
-    suspend fun eyeImage()
+    suspend fun eyeImage()*/
 
 }

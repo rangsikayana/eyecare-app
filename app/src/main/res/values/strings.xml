@@ -58,4 +58,284 @@ Wearing sunglasses can protect your eyes if they are sensitive to bright light. 
 wear contact lenses, remove them and wear glasses to give your eyes a rest.</item>
         <item>Prescription eye drops can lower the pressure in your eye and prevent damage to your optic nerve. To lower your eye pressure, doctors can use lasers to help the fluid drain out of your eye. If medicines and laser treatment don’t work, there are several different types of surgery that can help the fluid drain out of your eye.</item>
     </string-array>
+
+
+    <string-array name="data_med_photo">
+        <item>https://welzo.com/cdn/shop/articles/acetazolamide-a-comprehensive-guide-on-uses-side-effects-and-more-welzo_17703439-a1c7-4635-83b4-a94aa4955976.jpg?v=1710941727</item>
+        <item>https://accessdoctor.co.uk/wp-content/uploads/2021/08/azithromycin.jpg</item>
+        <item>https://res.cloudinary.com/dk0z4ums3/image/upload/v1694394151/attached_image/betason-n-0-alodokter.jpg</item>
+        <item>https://www.netmeds.com/images/product-v1/600x600/938460/azopt_ophthalmic_suspension_5ml_0_0.jpg</item>
+        <item>https://pharmacy.bm/wp-content/uploads/2021/09/I1-10459.jpg</item>
+        <item>https://image.made-in-china.com/2f0j00gqjWplbanAfm/Cipro-Ciprofloxacin-Oral-Tablet-500mg-Antibiotic-Medicine-with-GMP.webp</item>
+        <item>https://5.imimg.com/data5/LR/IF/MY-7034457/dexamethasone-eye-drops.jpg</item>
+        <item>https://5.imimg.com/data5/SELLER/Default/2022/4/WC/NZ/LP/31640038/dorzox-eye-drop.jpg</item>
+        <item>https://d20525yxyrfxle.cloudfront.net/site_assets/images/fmIRMI1qXViVHUOgojS32989DXUYOdmAdg7Kf0JK.jpeg</item>
+        <item>https://mcareexports.com/wp-content/uploads/2021/05/epitane-eye-drop.jpg</item>
+        <item>https://5.imimg.com/data5/SELLER/Default/2023/10/353400770/QY/KR/LJ/76835678/fml-eye-drops-500x500.jpg</item>
+        <item>https://d2qjkwm11akmwu.cloudfront.net/products/14559-1665787027.webp</item>
+        <item>https://d2qjkwm11akmwu.cloudfront.net/products/14481-1665786975.webp</item>
+        <item>https://images.tokopedia.net/img/cache/700/VqbcmM/2024/1/26/e977af40-5b90-4ace-aee2-bcd5f1275bda.png</item>
+        <item>https://webdokter.id/wp-content/uploads/2021/08/C6448FB5-78CF-4EEB-A6DF-059D5595F497.png</item>
+        <item>https://d3bbrrd0qs69m4.cloudfront.net/images/product/large/apotek_online_k24klik_20230824013447359225_LEVOCIN.png</item>
+        <item>https://d2qjkwm11akmwu.cloudfront.net/products/7904-1665777289.webp</item>
+        <item>https://kalbemed.com/storage/images/products/a77af33a9e2d23d326b8bf586ffdfe79.jpg</item>
+        <item>https://img.lazcdn.com/g/p/c08d21496edf79566f53ac1ca3b85e4c.jpg_720x720q80.jpg</item>
+        <item>https://images.tokopedia.net/img/cache/700/hDjmkQ/2024/5/23/f145a24b-cea0-4fe6-8a2d-589f49872ae6.jpg</item>
+        <item>https://d2qjkwm11akmwu.cloudfront.net/products/7283-1665776349.webp</item>
+        <item>https://d2qjkwm11akmwu.cloudfront.net/products/9241-1665779468.jpeg</item>
+        <item>https://d3bbrrd0qs69m4.cloudfront.net/images/product/apotek_online_k24klik_201610080225561922_500-Travatan.jpg</item>
+    </string-array>
+
+    <string-array name="data_medication">
+        <item>Acetazolamide</item>
+        <item>Azithromycin</item>
+        <item>Betamethasone</item>
+        <item>Brinzolamide</item>
+        <item>Carbomer</item>
+        <item>Ciprofloxacin</item>
+        <item>Dexamethasone</item>
+        <item>Dorzolamide</item>
+        <item>Emedastine</item>
+        <item>Epinastine</item>
+        <item>Fluorometholone</item>
+        <item>Gentamicin</item>
+        <item>Homatropine</item>
+        <item>Hypromellose</item>
+        <item>Ketorolac</item>
+        <item>Levobunolol</item>
+        <item>Levofloxacin </item>
+        <item>Moxifloxacin</item>
+        <item>Nepafenac</item>
+        <item>Ofloxacin</item>
+        <item>Pilocarpine</item>
+        <item>Sodium cromoglicate</item>
+        <item>Travoprost</item>
+    </string-array>
+
+    <string-array name="data_overview">
+    <item>Acetazolamide helps to reduce increased eye pressure (glaucoma).
+If you feel sleepy after taking the tablets/capsules, do not drive and do not use tools or machines until you feel better.
+There are a number of common side-effects, but they are not usually serious.</item>
+        <item>Azithromycin drops are used to treat bacterial eye infections.
+Use the drops morning and evening for three days. Try to not miss any doses.
+Your vision may become slightly blurred for a short while after using the drops. If so, do not drive and do not use tools or machines until you can see clearly again.
+
+In this article:</item>
+        <item>Betamethasone eye drops are usually prescribed by an eye specialist.
+        Unless you\'ve been told otherwise, use the drops regularly every 1-2 hours until your symptoms are controlled,
+        and then several times a day for a few days.
+        Eye drops can cause blurred vision when first put in. Do not drive and do not use tools or machines until your vision is clear again.</item>
+        <item>Brinzolamide eye drops are used to control increased pressure within your eye (glaucoma).
+        Remember to use the drops regularly - try not to miss any doses.
+
+        If you normally wear soft contact lenses, please make sure your doctor knows about this.</item>
+        <item>Carbomer eye gel acts as artificial tears. It makes dry eyes feel more comfortable.
+        Use the gel three or four times a day, or more often if required.
+
+        If your vision becomes blurred after using the gel, do not drive until you can see clearly again.</item>
+        <item>Ciprofloxacin drops and ointment are used to treat bacterial eye infections.
+        If your vision becomes blurred after using ciprofloxacin, do not drive until you can see clearly again./n
+
+        Continue to use this preparation for a further 48 hours once your symptoms have gone./n
+
+        Do not wear contact lenses while you are using ciprofloxacin.</item>
+        <item>Dexamethasone eye drops are usually prescribed by an eye specialist.\n
+        Unless you\'ve been told otherwise, use the drops every 30-60 minutes until your symptoms are controlled and then 4-6 times a day for a few days.\n
+        Eye drops can cause blurred vision when first put in. Do not drive and do not use tools or machines until your vision is clear again.</item>
+        <item>
+Dorzolamide eye drops are used to control increased pressure within your eye (glaucoma).\n
+
+Remember to use the drops regularly - try not to miss any doses.\n
+
+If you normally wear soft contact lenses, please make sure your doctor knows about this.
+        </item>
+        <item>Emedastine drops relieve eye irritation associated with allergies like hay fever.
+
+Use one drop twice a day, in the morning and the evening
+
+It is not recommended that you wear soft contact lenses while you are using the drops.</item>
+        <item>Epinastine drops relieve eye irritation associated with allergies like hay fever.\n
+Use one drop twice a day, in the morning and the evening\n
+You should not wear soft contact lenses whilst being treated with epinastine eye drops.</item>
+        <item>Fluorometholone eye drops are usually prescribed by an eye specialist.\n
+
+Unless you\'ve been told otherwise, use the drops every hour you are awake until your symptoms are controlled, and then 2-4 times a day for a few days.\n
+
+Eye drops can cause blurred vision when first put in. Do not drive and do not use tools or machines until your vision is clear again.</item>
+        <item>Gentamicin drops are used to treat (or prevent) eye infections. Follow carefully the instructions you have been given for using the drops.\n
+
+Your vision may become slightly blurred for a short while after using the drops. If so, do not drive and do not use tools or machines until you can see clearly again.\n
+
+Do not wear contact lenses until your symptoms have completely gone.</item>
+        <item>Homatropine eye drops allow your doctor to examine your eye more easily.
+
+The drops can cause blurred vision which may last for several hours. Do not drive and do not use tools or machines until your vision is clear again.</item>
+        <item>Hypromellose eye drops act as artificial tears. They make dry eyes feel more comfortable.\n
+
+Use the drops three or four times a day, or more often if required.\n
+
+If your vision becomes blurred for a short while after using the drops, do not drive until you can see clearly again.</item>
+        <item>Tell your doctor before using the drops if you are allergic to aspirin or to medicines called non-steroidal anti-inflammatory drugs (NSAIDs).\n
+
+Use one drop three times daily for three weeks, unless you have been told otherwise by your doctor.\n
+
+The most common side-effect is a burning or stinging feeling when the drops are put in. This does not last for long.</item>
+        <item>Levobunolol eye drops are used to control increased pressure within your eye (glaucoma).\n
+
+Remember to use the drops regularly - try not to miss any doses.\n
+
+If you normally wear soft contact lenses, please make sure your doctor knows about this.</item>
+        <item>Use the drops every two hours during the day for the first two days, then reduce the frequency down to four times a day for the next three days.\n
+
+Your vision may become slightly blurred for a short while after using the drops. If so, do not drive and do not use tools or machines until you can see clearly again.\n
+
+Do not wear contact lenses until 24 hours after your symptoms have completely gone.</item>
+        <item>Use moxifloxacin eye drops three times a day.
+
+Your vision may become slightly blurred for a short while after using the drops. If so, do not drive and do not use tools or machines until you can see clearly again.
+
+After your symptoms have gone, continue to use the drops for a further 2-3 days to make sure all the infection has cleared.
+
+Do not wear contact lenses until 24 hours after your last dose.</item>
+        <item>Tell your doctor before using these drops if you are allergic to aspirin or to medicines called non-steroidal anti-inflammatory drugs (NSAIDs).
+
+Use one drop three times daily, unless you have been told otherwise.
+
+Your eyes may become more sensitive to sunlight than usual. If this happens, wearing sunglasses may help.</item>
+        <item>Ofloxacin drops are used to treat bacterial eye infections.
+
+Your vision may become slightly blurred for a short while after using the drops. If so, do not drive and do not use tools or machines until you can see clearly again.
+
+After your symptoms have gone, continue to use the drops for a further 48 hours to make sure all the infection has cleared.</item>
+        <item>Headache can be a troublesome side-effect when you first start using pilocarpine. Ask your doctor or pharmacist to recommend a suitable painkiller.
+
+Keep your regular appointments with your doctor and clinic so that your progress can be checked.</item>
+        <item>Sodium cromoglicate drops are used to treat red, watery, itchy eyes caused by allergies such as hay fever.
+
+Use the drops in both eyes - use one drop four times a day.
+
+Eye drops may cause blurred vision when first put in. Wait until this clears before you drive and before you use tools or machines.</item>
+        <item>Travoprost reduces raised pressure in your eye.
+
+Remember to use the eye drops every day.
+
+The drops can alter the colour of your eyes over time, and cause your eyelashes to grow darker and thicker. Your doctor will discuss this with you.</item>
+    </string-array>
+
+    <string-array name="data_about">
+        <item>Acetazolamide works by blocking the action of an enzyme called carbonic anhydrase.
+            Blocking this enzyme reduces the amount of fluid (called aqueous humour) that you make in the front part of your eye,
+            and this helps to lower the pressure within your eye.
+
+            Acetazolamide is sometimes prescribed for other conditions which are not covered by this leaflet.
+            If you have been prescribed it to remove excess water from your body, to prevent altitude sickness or to help treat epilepsy,
+            speak with your doctor if you need further advice.
+        </item>
+        <item>Azithromycin eye drops are used to treat bacterial conjunctivitis.
+            helps to kill the bacteria which are causing the infection. Eye infections are a common cause of conjunctivitis.
+            In conjunctivitis, your eye becomes inflamed, feels gritty, and may water more than usual. The white of your eye may look red,
+            and your eyelids can become swollen and stuck together with a discharge when you wake up in the morning.
+            Azithromycin is used to treat eye infections which produce a lot of pus, and also those caused by bacteria called Chlamydia trachomatis.
+
+            Azithromycin eye drops can be prescribed for adults and children of all ages.</item>
+        <item>Betamethasone eye drops are used to treat short-term inflammatory eye conditions.
+            They are usually prescribed by an eye specialist. They contain a corticosteroid (sometimes called a steroid) which helps relieve inflammation, redness and irritation.
+
+            Some betamethasone eye drops also contain an anti-infective medicine called neomycin. These drops are sometimes used to prevent infections from developing following eye injury or surgery.</item>
+        <item>Brinzolamide works by blocking the action of an enzyme called carbonic anhydrase.
+            Blocking this enzyme reduces the amount of fluid that you make in the front part of your eye (called aqueous humour),
+            and this helps to lower the pressure within your eye.
+
+            Sometimes, more than one type of eye drop is needed to keep the pressure in the eye low.
+            If this is the case for you, you may be asked to use two different eye drops, or you may be given drops which combine more than one type.
+            Brinzolamide is available as a combination eye drop with a beta-blocker called timolol (in a brand called Azarga®), and with a medicine called brimonidine (in a brand called Simbrinza®).</item>
+        <item>Carbomer eye gels are used to relieve eye dryness and soreness. The gel produces a fine transparent film on your eye.
+            This protects, soothes and lubricates the surface of your eye and makes it feel more comfortable.
+            Carbomer eye gel is quite runny and works like a liquid eye drop.
+            It is available on prescription or you can buy it without a prescription at a pharmacy.</item>
+        <item>Ciprofloxacin eye drops and ointment are used to treat bacterial eye infections.
+            They work by helping to kill the germs (bacteria) which are causing the infection.
+            Eye infections are a common cause of conjunctivitis. In conjunctivitis, your eye becomes inflamed, feels gritty, and may water more than usual.
+            The white of your eye may look red, and your eyelids may become swollen and stuck together with a discharge when you wake up in the morning.
+            Only one eye may be infected to begin with, but it often spreads to both eyes. Most cases of infective conjunctivitis clear within a week or so without treatment.
+            For more severe infections, or for infections which do not clear on their own, an antibiotic eye drop such as ciprofloxacin is used./n
+
+            Ciprofloxacin is also prescribed to treat corneal ulcers. A corneal ulcer is one which forms on the delicate layer covering the surface of your eye.</item>
+        <item>Dexamethasone eye drops are used to treat short-term inflammatory eye conditions. They are usually prescribed by an eye specialist. They contain a corticosteroid (sometimes called a steroid) which helps relieve inflammation, redness and irritation.\n
+Some dexamethasone eye drops also contain an anti-infective medicine. These drops are sometimes used to prevent infections from developing following eye surgery.</item>
+        <item>
+            Dorzolamide works by blocking the action of an enzyme called carbonic anhydrase. Blocking this enzyme reduces the amount of fluid that you make in the front part of your eye (called aqueous humour), and this helps to lower the pressure within your eye.\n
+
+Sometimes, more than one type of eye drop is needed to keep the pressure in the eye low. If this is the case for you, you may be asked to use two different eye drops, or you may be given drops which combine more than one type. Dorzolamide is available as a combination eye drop with a beta-blocker called timolol, in a brand called Cosopt®.
+        </item>
+        <item>Hay fever is caused by an allergy to pollen. The symptoms of hay fever are due to your immune system reacting to pollen.
+            Cells on the lining of your eyes release a chemical called histamine, which causes conjunctivitis (eye inflammation).
+            Hay fever is also called seasonal allergic conjunctivitis because symptoms tend to occur at the same time, or in the same season, each year.
+            Typical symptoms of seasonal allergic conjunctivitis are red, itchy and watery eyes.
+            Emedastine drops relieve these symptoms by blocking the action of histamine in the cells on the surface of your eyes.</item>
+        <item>Hay fever is caused by an allergy to pollen. The symptoms of hay fever are due to your immune system reacting to pollen.
+            Cells on the lining of your eyes release a chemical called histamine, which causes eye inflammation (conjunctivitis).
+            Hay fever is also called seasonal allergic conjunctivitis because symptoms tend to occur at the same time, or in the same season, each year.
+            Typical symptoms of seasonal allergic conjunctivitis are red, itchy and watery eyes. \n
+
+            Epinastine drops relieve these symptoms by blocking the action of histamine in the cells on the surface of your eyes.</item>
+        <item>Fluorometholone eye drops are used to treat short-term inflammatory eye conditions. They are usually prescribed by an eye specialist.
+            They contain a corticosteroid (sometimes called a steroid) which helps relieve inflammation, redness and irritation.</item>
+        <item>Gentamicin eye drops are prescribed for bacterial infections of the eyes or eyelids. The drops kill germs (bacteria) which are the cause of infection.\n
+
+Eye infections are a common cause of conjunctivitis. In conjunctivitis, your eye becomes inflamed, feels gritty, and may water more than usual. The white of your eye may look red, and your eyelids may become swollen and stuck together with a discharge when you wake up in the morning. Only one eye may be infected to begin with, but it often spreads to both eyes. Most cases of infective conjunctivitis clear within a week or so without treatment. For more severe infections, or for infections which do not clear on their own, an antibiotic eye drop such as gentamicin is used.\n
+
+Gentamicin eye drops are also prescribed for minor eye injuries, such as scratches and abrasions to the cornea - the delicate layer covering the surface of your eye. In such cases, the drops are prescribed to prevent an eye infection from developing while the eye heals.</item>
+        <item>Homatropine makes the pupil of your eye larger and relaxes the muscles in your eye. These things make it easier for your eye to be examined and your vision tested.\n
+
+Homatropine drops can also be prescribed during the treatment of a condition called anterior uveitis. This is a painful eye condition caused by inflammation within the eye. By making your pupil larger and relaxing the muscles in your eye, it reduces pain and allows the inflamed part of your eye to rest and recover.</item>
+        <item>Hypromellose eye drops are also known as artificial tears. They are used to relieve eye dryness and soreness, particularly where the dryness is caused by a reduced flow of tears. They moisten, soothe and lubricate the surface of your eye, making it feel more comfortable.\n
+
+The drops are available on prescription, or you can buy them without a prescription at a pharmacy.</item>
+        <item>Ketorolac belongs to a group of medicines known as non-steroidal anti-inflammatory drugs (NSAIDs). K
+            etorolac eye drops are used short-term to relieve pain and swelling following eye surgery.</item>
+        <item>In chronic open-angle glaucoma there is damage to the optic nerve at the back of your eye. It is usually caused by an increase in pressure within your eye.
+            Levobunolol eye drops work by lowering the pressure in your eye. They do this by reducing the amount of fluid that you make that fills the front part of your eye (called aqueous humour).
+            By reducing the amount of fluid produced, it reduces the pressure within your eye.</item>
+        <item>Levofloxacin eye drops are prescribed to treat bacterial eye infections. They work by helping to kill the bacteria which are causing the infection.\n
+
+            Eye infections are a common cause of conjunctivitis. In conjunctivitis, your eye becomes inflamed, feels gritty, and may water more than usual.
+            The white of your eye may look red, and your eyelids may become swollen and stuck together with a discharge when you wake up in the morning.
+            Only one eye may be infected to begin with, but it often spreads to both eyes. Although infective conjunctivitis may clear without treatment,
+            antibiotic eye drops such as levofloxacin can often be helpful for more severe infections, or for infections which do not clear on their own.</item>
+        <item>Moxifloxacin eye drops are prescribed to treat bacterial eye infections. They work by helping to kill the bacteria which are causing the infection.\n
+
+Eye infections are a common cause of conjunctivitis. In conjunctivitis, your eye becomes inflamed, feels gritty, and may water more than usual.
+            The white of your eye may look red, and your eyelids may become swollen and stuck together with a discharge when you wake up in the morning.
+            Only one eye may be infected to begin with, but it often spreads to both eyes.
+            Although infective conjunctivitis may clear without treatment, antibiotic eye drops such as moxifloxacin can often be helpful.</item>
+        <item>Nepafenac eye drops relieve eye pain and swelling which can be caused by cataract surgery.
+            They are also used to reduce the risk of this occurring in people who are at particular risk of it.
+            Nepafenac belongs to a group of medicines known as non-steroidal anti-inflammatory drugs (NSAIDs).</item>
+        <item>Ofloxacin eye drops are used to treat bacterial eye infections. They work by helping to kill the bacteria which are causing the infection.\n
+
+Eye infections are a common cause of conjunctivitis. In conjunctivitis, your eye becomes inflamed, feels gritty, and may water more than usual.
+            The white of your eye may look red, and your eyelids may become swollen and stuck together with a discharge when you wake up in the morning.
+            Only one eye may be infected to begin with, but it often spreads to both eyes. Most cases of infective conjunctivitis clear within a week or so without treatment.\n
+            For more severe infections, or for infections which do not clear on their own, an antibiotic eye drop such as ofloxacin can be used.</item>
+        <item>Pilocarpine eye drops are used for glaucoma. They are most commonly used for acute angle-closure glaucoma (AACG).
+            This occurs when the pressure inside your eye gets too high very quickly. AACG is sometimes referred to as acute closed-angle glaucoma, or simply, acute glaucoma.
+            It must be treated straightaway.\n
+
+This type of glaucoma is caused by a sudden blockage in your eye, which prevents fluid from draining out of your eye.
+            As more fluid is still being made in your eye, the pressure inside your eye starts to rise quickly.
+            This causes pain and redness and your vision may be affected. Pilocarpine works by causing your pupil to constrict which opens up the drainage channels in your eye.
+            This allows the fluid to leave your eye and relieves the pressure.\n
+
+There are other types of glaucoma which occur more gradually but pilocarpine is not commonly used for the treatment of these.</item>
+        <item>Sodium cromoglicate eye drops relieve the symptoms of allergic conjunctivitis by reducing the release of a chemical called histamine which causes inflammation.
+            They are suitable for use in adults and children. The drops are available on prescription, and you can also buy them at a pharmacy and other retail outlets, without a prescription.\n
+
+Sodium cromoglicate is also available as a nasal spray, inhaler and oral capsules. See the individual medicine leaflets for more information on these products.</item>
+        <item>Travoprost eye drops work by increasing the drainage of fluid from inside your eye. This helps to lower the pressure within your eye.
+
+Sometimes, more than one type of eye drop is needed to keep the pressure in the eye low. If this is the case for you, you may be asked to use two different eye drops, or you may be given drops which combine more than one type.
+            Travoprost is available as a combination eye drop with another medicine which reduces eye pressure, called timolol (a beta-blocker), in a brand called DuoTrav®.</item>
+    </string-array>
+
 </resources>
