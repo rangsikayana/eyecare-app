@@ -61,7 +61,44 @@ The trained model was saved in both .h5 and .keras formats, facilitating easy lo
 
 To make the model accessible via web applications, it was converted to TensorFlow.js format. This allows the model to run directly in the browser, enabling real-time predictions without the need for server-side computations.
 
+### Model Evaluation
+
+#### Accuracy
+
+The final model achieved a high accuracy on the test set, indicating its effectiveness in correctly identifying the different eye conditions. Here are the accuracy metrics for the model:
+
+| Metric              | Value     |
+|---------------------|-----------|
+| **Training Accuracy** | 87.93%    |
+| **Validation Accuracy** | 83.83%    |
+| **Test Accuracy**    | 89.26%    |
+
+#### Loss
+
+| Metric              | Value     |
+|---------------------|-----------|
+| **Training Loss**    | 0.3336    |
+| **Validation Loss**  | 0.6806    |
+| **Test Loss**        | 0.49017   |
+
+#### Classification Report
+
+The classification report provides detailed insights into the model's performance across different classes. It includes precision, recall, and F1-score for each class, as well as the overall accuracy, macro average, and weighted average metrics. Below is the classification report for the model:
+
+| Class         | Precision | Recall | F1-Score | Support |
+|---------------|-----------|--------|----------|---------|
+| Bulging_Eyes  | 0.95      | 1.00   | 0.98     | 21      |
+| Cataracts     | 0.89      | 0.89   | 0.89     | 19      |
+| Crossed_Eyes  | 0.84      | 0.84   | 0.84     | 19      |
+| Glaucoma      | 0.90      | 0.90   | 0.90     | 20      |
+| Normal_Eyes   | 0.79      | 0.90   | 0.84     | 21      |
+| Uveitis       | 1.00      | 0.81   | 0.89     | 21      |
+| **Accuracy**  |           |        | 0.89     | 121     |
+| **Macro Avg** | 0.90      | 0.89   | 0.89     | 121     |
+| **Weighted Avg** | 0.90  | 0.89   | 0.89     | 121     |
+
+
 
 ## Conclusion
 
-This project successfully demonstrates the use of deep learning and transfer learning techniques for eye disease classification. The model can accurately identify six different eye conditions, which can assist in early diagnosis and treatment planning. The combination of robust data preprocessing, augmentation, and careful model tuning contributed to the project's success.
+This project successfully demonstrates the use of deep learning and transfer learning techniques for eye disease classification. The model can accurately identify six different eye conditions, which can assist in early diagnosis and treatment planning. The final model achieved a test accuracy of 89.26% with a test loss of 0.49017, indicating its effectiveness and reliability.
