@@ -17,7 +17,7 @@ class InfoActivity : AppCompatActivity() {
 
         val disease = intent.getStringExtra(EXTRA_DISEASE)
         val content = intent.getStringExtra(EXTRA_DESC)
-        val img = intent.getIntExtra(EXTRA_IMG, 0)
+        val img = intent.getStringExtra(EXTRA_IMG)
 
         binding.apply {
             infoHeader.text = disease

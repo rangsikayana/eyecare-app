@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.submission.eyecare.R
 import com.submission.eyecare.adapter.MedsAdapter
 import com.submission.eyecare.data.local.Medications
@@ -73,7 +74,7 @@ class MedicationFragment : Fragment() {
         val rv = binding.medsRv
         medsAdapter = MedsAdapter(itemList)
         rv.setHasFixedSize(true)
-        rv.layoutManager = GridLayoutManager(requireActivity(), 2)
+        rv.layoutManager = LinearLayoutManager(requireActivity())
         rv.adapter = medsAdapter
     }
 

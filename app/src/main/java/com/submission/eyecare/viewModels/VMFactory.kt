@@ -1,6 +1,5 @@
 package com.submission.eyecare.viewModels
 
-import android.app.Application
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -24,7 +23,7 @@ class VMFactory private constructor(private val repo: UserRepos) : ViewModelProv
             return NotificationsViewModel(repo) as T
         } else if (modelClass.isAssignableFrom(LoginViewModel::class.java)) {
             return LoginViewModel(repo) as T
-        }else if (modelClass.isAssignableFrom(RegisterViewModel::class.java)) {
+        } else if (modelClass.isAssignableFrom(RegisterViewModel::class.java)) {
             return RegisterViewModel(repo) as T
         }
         if (modelClass.isAssignableFrom(PlateViewModel::class.java)) {
@@ -32,7 +31,6 @@ class VMFactory private constructor(private val repo: UserRepos) : ViewModelProv
         }
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
     }
-
     companion object {
         @Volatile
         private var INSTANCE: VMFactory? = null

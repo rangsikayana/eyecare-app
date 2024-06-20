@@ -19,23 +19,24 @@
 
         <ImageView
             android:id="@+id/userProfile"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginStart="16dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/userName"
+            android:id="@+id/category_hist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="Result : %s  %"
+            android:text="Result:"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/userProfile"
@@ -43,16 +44,23 @@
 
 
         <TextView
-            android:id="@+id/note"
+            android:id="@+id/percent_hist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="DATE || TIME"
-            android:textStyle="italic"
-            app:layout_constraintStart_toStartOf="@+id/userName"
-            app:layout_constraintTop_toBottomOf="@+id/userName" />
+            android:layout_marginStart="16dp"
+            android:text="Normal"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/category_hist"
+            app:layout_constraintTop_toTopOf="@+id/category_hist" />
+
+        <Button
+            android:id="@+id/btnDel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="delete"
+            app:layout_constraintStart_toStartOf="@+id/category_hist"
+            app:layout_constraintTop_toBottomOf="@+id/category_hist" />
 
         <ImageView
             android:layout_width="50dp"
@@ -61,7 +69,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/userName"
+            app:layout_constraintStart_toEndOf="@+id/category_hist"
             app:layout_constraintTop_toTopOf="parent" />
 
 

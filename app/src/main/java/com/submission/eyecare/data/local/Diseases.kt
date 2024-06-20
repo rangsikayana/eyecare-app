@@ -7,5 +7,5 @@ import kotlinx.parcelize.Parcelize
 data class Diseases(
     val name: String,
     val desc: String,
-    val pic: Int
+    val pic: String
 ) : Parcelable

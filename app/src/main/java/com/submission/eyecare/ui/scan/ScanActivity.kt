@@ -8,8 +8,10 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import com.submission.eyecare.databinding.ActivityScanBinding
 import android.Manifest
+import android.content.Intent
 import android.util.Log
 import androidx.activity.result.PickVisualMediaRequest
+import com.submission.eyecare.R
 import com.submission.eyecare.utils.getImageUri
 import com.submission.eyecare.utils.showToast
 
@@ -46,8 +48,12 @@ class ScanActivity : AppCompatActivity() {
 
         binding.btnGallery.setOnClickListener { startGallery() }
         binding.btnCamera.setOnClickListener { startCamera() }
+        //setup for dummy data
         binding.btnAnalyze.setOnClickListener {
 //            need to do
+            currentImageUri?.let {
+                analyzeImage(it)
+            }
         }
 
     }
@@ -86,7 +92,34 @@ class ScanActivity : AppCompatActivity() {
         if (isSuccess) {
             showImage()
         }
+    }
 
+
+    private fun analyzeImage(img: Uri) {
+        val category = getString(R.string.category)
+        val percentage = getString(R.string.percentage)
+        val diagnosis = getString(R.string.diagnosis)
+        val treatment = getString(R.string.treatment)
+        val food = getString(R.string.food)
+        val vitamins = getString(R.string.vitamins)
+        moveToResult(img, category, percentage, diagnosis, treatment, food, vitamins)
+    }
+
+    private fun moveToResult(
+        imgUri: Uri?, category: String,
+        percent: String,
+        diagnosis: String, treatment: String,
+        food: String, vitamins: String ) {
+        val intention = Intent(this, ResultActivity::class.java)
+        intention.putExtra(ResultActivity.EXTRA_IMAGE_URI, imgUri.toString())
+        intention.putExtra(ResultActivity.EXTRA_CATEGORY, category)
+        intention.putExtra(ResultActivity.EXTRA_PERCENTAGE, percent)
+        intention.putExtra(ResultActivity.EXTRA_DIAGNOSIS, diagnosis)
+        intention.putExtra(ResultActivity.EXTRA_TREATMENT, treatment)
+        intention.putExtra(ResultActivity.EXTRA_FOOD, food)
+        intention.putExtra(ResultActivity.EXTRA_VITAMIN, vitamins)
+        startActivity(intention)
+        finish()
     }
 
     companion object {

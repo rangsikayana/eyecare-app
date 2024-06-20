@@ -15,9 +15,12 @@ class DiseaseAdapter(private val list: ArrayList<Diseases>): RecyclerView.Adapte
     inner class DiseaseViewHolder(private val bind: DiseaseHolderBinding) : RecyclerView.ViewHolder(bind.root) {
         fun insert(item: Diseases) {
             val desc = item.desc
+            val img = item.pic
             bind.apply {
                 diseaseName.text = item.name
-                icDisease.setImageResource(item.pic)
+                Glide.with(itemView)
+                    .load(img)
+                    .into(icDisease)
                 disBtn.setOnClickListener{
                     val intent = Intent(it.context, InfoActivity::class.java)
                     intent.putExtra(InfoActivity.EXTRA_DESC, desc)

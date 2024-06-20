@@ -280,7 +280,7 @@
     <Transition
         motion:constraintSetStart="@+id/menu2"
         motion:constraintSetEnd="@+id/menu3"
-        motion:autoTransition="animateToEnd" >
+        motion:autoTransition="none" >
         <OnSwipe motion:dragDirection="dragLeft" />
     </Transition>
 </MotionScene>

@@ -69,26 +69,23 @@ class HomeFragment : Fragment() {
         }
         return root
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
     private fun setup() {
         val rv = binding.DiseaseRv
         rv.setHasFixedSize(true)
         rv.layoutManager = LinearLayoutManager(requireActivity(), RecyclerView.HORIZONTAL, false)
         rv.adapter = disAdapter
     }
-
     private fun getData(): ArrayList<Diseases> {
         val dataDiseases = resources.getStringArray(R.array.data_disease)
         val dataDesc = resources.getStringArray(R.array.data_desc)
-        val dataPhoto = resources.obtainTypedArray(R.array.data_icon)
+        val dataPhoto = resources.getStringArray(R.array.data_icon)
         val listDis = ArrayList<Diseases>()
         for (i in dataDiseases.indices) {
-            val item  = Diseases(dataDiseases[i], dataDesc[i], dataPhoto.getResourceId(i, -1))
+            val item  = Diseases(dataDiseases[i], dataDesc[i], dataPhoto[i])
             listDis.add(item)
         }
         return listDis
