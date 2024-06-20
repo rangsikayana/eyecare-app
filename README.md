@@ -85,7 +85,7 @@ To stay on track, the EyeCare team uses a Gantt Chart with the Agile methodology
 ## Bibliography
 
 ### A. Dataset
-Our dataset can be found [here](https://drive.google.com/drive/folders/1aA--HjGDswTQ_ZdB4_ErIAOo88JergX9?usp=sharing).
+Our dataset can be found [here](https://github.com/rangsikayana/eyecare-app/tree/dc9c53006a620e5f5e1c13ba06122c0c854659fe/Dataset).
 
 ### B. Resources
 Tools/IDE/Library and resources we used to build the app:
