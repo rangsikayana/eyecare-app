@@ -19,7 +19,7 @@ Welcome to our repository for the Bangkit 2024 Capstone project. Our project, Ey
 | Charrisma Dwi Mahardika  | C006D4KY1164 | Cloud Computing    | [LinkedIn](https://www.linkedin.com/in/charrisma-dwi-mahardika-trisna-purnama-a777b3300/)      |
 
 <br>
-<div><img src="https://drive.google.com/file/d/1SE2A5L2w_0OnzesGvP5_bxMUqzDkF5vq/view?usp=sharing"></div>
+<img width="339" alt="image" src="[https://assets-global.website-files.com/6266b596eef18c1931f938f9/644af6a24701d43aaecd8771_classification_guide_apc09.png](https://drive.google.com/file/d/1SE2A5L2w_0OnzesGvP5_bxMUqzDkF5vq/view?usp=sharing)">
 <br>
 
 ## Problem Statement
