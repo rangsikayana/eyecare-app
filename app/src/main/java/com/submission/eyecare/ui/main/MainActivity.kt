@@ -12,11 +12,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.submission.eyecare.R
 import com.submission.eyecare.databinding.ActivityMainBinding
-import com.submission.eyecare.ui.auth.login.LoginActivity
-import com.submission.eyecare.ui.auth.register.RegisterActivity
-import com.submission.eyecare.ui.colorBlindTest.ColorTestActivity
-import com.submission.eyecare.ui.profile.ProfileActivity
-import com.submission.eyecare.ui.scan.ScanActivity
 import com.submission.eyecare.viewModels.MainViewModels
 import com.submission.eyecare.viewModels.VMFactory
 
