@@ -18,9 +18,7 @@ Welcome to our repository for the Bangkit 2024 Capstone project. Our project, Ey
 | Ridwan Aji Nugraha       | C006D4KY0008 | Cloud Computing    | [LinkedIn](http://www.linkedin.com/in/ridwan-aji-nugraha-99a41b2b6)                            |
 | Charrisma Dwi Mahardika  | C006D4KY1164 | Cloud Computing    | [LinkedIn](https://www.linkedin.com/in/charrisma-dwi-mahardika-trisna-purnama-a777b3300/)      |
 
-<br>
-<img width="339" alt="image" src="[https://assets-global.website-files.com/6266b596eef18c1931f938f9/644af6a24701d43aaecd8771_classification_guide_apc09.png](https://drive.google.com/file/d/1SE2A5L2w_0OnzesGvP5_bxMUqzDkF5vq/view?usp=sharing)">
-<br>
+![Eyecare Team](https://github.com/Nusatala/.github/assets/70735803/10205e94-1ed4-4fba-887a-89deb3b4c050)
 
 ## Problem Statement
 1. **Increased Screen Time:** Many people spend excessive time in front of screens for work, study, or entertainment, impacting their eye health.
