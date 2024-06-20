@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +20,7 @@ import com.submission.eyecare.ui.auth.login.LoginActivity
 import com.submission.eyecare.ui.auth.register.RegisterActivity
 import com.submission.eyecare.ui.colorBlindTest.ColorTestActivity
 import com.submission.eyecare.ui.scan.ScanActivity
+import com.submission.eyecare.viewModels.VMFactory
 
 class HomeFragment : Fragment() {
 
@@ -30,15 +32,16 @@ class HomeFragment : Fragment() {
     private val itemList =  ArrayList<Diseases>()
     private val disAdapter = DiseaseAdapter(itemList)
 
+    private val homeViewModel: HomeViewModel by viewModels {
+        VMFactory.getInstance(requireContext())
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -47,16 +50,21 @@ class HomeFragment : Fragment() {
         }
         setup()
 
+        homeViewModel.fetchName().observe(viewLifecycleOwner) {name ->
+            val name = name.displayName
+            binding.name.text = name
+        }
+
         binding.btnTest.setOnClickListener{
             startActivity(Intent(requireActivity(), ColorTestActivity::class.java))
         }
 
         //to Access login and register
-        binding.btnLogin.setOnClickListener{
-            startActivity(Intent(requireActivity(), LoginActivity::class.java))
+        binding.btnAnalyze.setOnClickListener{
+            startActivity(Intent(requireActivity(), ScanActivity::class.java))
         }
 
-        binding.btnRegister.setOnClickListener{
+        binding.btnCart.setOnClickListener{
             startActivity(Intent(requireActivity(), RegisterActivity::class.java))
         }
         return root

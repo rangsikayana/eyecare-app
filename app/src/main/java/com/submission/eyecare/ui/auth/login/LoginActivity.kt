@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import com.submission.eyecare.data.UserModel
+import com.submission.eyecare.data.local.UserDisplayName
 import com.submission.eyecare.databinding.ActivityLoginBinding
 import com.submission.eyecare.ui.auth.register.RegisterActivity
 import com.submission.eyecare.ui.custom.CustomMail
@@ -56,8 +57,10 @@ class LoginActivity : AppCompatActivity() {
             if (res != null) {
                 when (res){
                     is Result.Success -> {
-                        val uid = res.data.toString() // uid = token
+                        val uid = res.data.uid.toString() // uid = token
+                        val name = res.data.name.toString()
                         loginViewModel.saveSession(UserModel(email, uid))
+                        loginViewModel.saveName(UserDisplayName(name))
                         isLoad(false)
                         setDialogOK()
                     }

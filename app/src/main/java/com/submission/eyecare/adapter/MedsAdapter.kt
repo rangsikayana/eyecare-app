@@ -30,10 +30,9 @@ class MedsAdapter (var list: ArrayList<Medications>): RecyclerView.Adapter<MedsA
             }
         }
     }
-    fun setFiltered(list: ArrayList<Medications>) {
-        this.list = list
+    fun setFiltered(filteredList: ArrayList<Medications>) {
+        this.list = filteredList
         notifyDataSetChanged()
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedsViewHolder {

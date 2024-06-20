@@ -8,7 +8,36 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal2"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.08"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+        <TextView
+            android:id="@+id/instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:padding="10dp"
+            android:text="Kindly Upload an Image of your Eyes and We will Scan it to Asses your Eye Health"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ivPreview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.progressindicator.LinearProgressIndicator
             android:id="@+id/progressIndicator"
@@ -22,58 +51,102 @@
 
         <ImageView
             android:id="@+id/ivPreview"
-            android:layout_width="395dp"
-            android:layout_height="565dp"
+            android:layout_width="305dp"
+            android:layout_height="400dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_place_holder" />
-
-        <Button
-            android:id="@+id/btnCamera"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/camera"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnGallery"
-            app:layout_constraintTop_toBottomOf="@+id/ivPreview" />
-
-        <Button
-            android:id="@+id/btnGallery"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:elevation="2dp"
             android:scaleType="fitCenter"
-            android:text="@string/gallery"
-            app:layout_constraintBottom_toBottomOf="@+id/btnCamera"
-            app:layout_constraintEnd_toStartOf="@+id/btnCamera"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/btnCamera"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <Button
-            android:id="@+id/btnAnalyze"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/analyze"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/grad_theme"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnCamera"
-            app:layout_constraintVertical_bias="0.876" />
+            app:layout_constraintTop_toBottomOf="@id/instruction"
+            app:srcCompat="@drawable/register_asset" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="48dp"
+            app:fabCustomSize="60dp"
+            android:src="@drawable/ic_place_holder"
+            app:layout_constraintBottom_toBottomOf="@+id/gallery_point"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPreview"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:src="@drawable/baseline_camera_alt_24"
+            app:fabCustomSize="60dp"
+            app:layout_constraintBottom_toBottomOf="@id/camera_point"
+            app:layout_constraintStart_toEndOf="@id/btnAnalyze"
+            app:layout_constraintTop_toTopOf="@+id/btnGallery"
+            app:layout_constraintVertical_bias="0.0"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAnalyze"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="32dp"
+            app:fabCustomSize="80dp"
+            android:src="@drawable/ic_baseline_search_24"
+            app:maxImageSize="40dp"
+            android:backgroundTint="#FF8000"
+            app:layout_constraintStart_toEndOf="@id/btnGallery"
+            app:layout_constraintTop_toBottomOf="@+id/ivPreview"
+            app:layout_constraintBottom_toBottomOf="@id/scan_point"/>
+
+        <TextView
+            android:id="@+id/gallery_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Gallery"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnGallery"
+            app:layout_constraintStart_toStartOf="@+id/btnGallery"
+            app:layout_constraintTop_toBottomOf="@+id/btnGallery" />
+
+        <TextView
+            android:id="@+id/scan_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Analyze"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnAnalyze"
+            app:layout_constraintStart_toStartOf="@+id/btnAnalyze"
+            app:layout_constraintTop_toBottomOf="@+id/btnAnalyze" />
+
+        <TextView
+            android:id="@+id/camera_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Camera"
+            android:textSize="16sp"
+
+            app:layout_constraintEnd_toEndOf="@+id/btnCamera"
+            app:layout_constraintStart_toStartOf="@+id/btnCamera"
+            app:layout_constraintTop_toBottomOf="@+id/btnCamera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@+id/scan_point"
+            app:layout_constraintStart_toStartOf="@id/scan_point"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

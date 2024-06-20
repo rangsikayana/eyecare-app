@@ -17,6 +17,7 @@ class ColorTestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityColorTestBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()

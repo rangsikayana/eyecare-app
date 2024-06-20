@@ -24,6 +24,20 @@
     <string name="Taken">Email is Taken</string>
     <string name="Empty">This Field Should not be empty</string>
 
+
+    // landing page
+    <string name="first">Eye Safety First</string>
+    <string name="first_content">As one of the senses we have, we must take care of our eyes condition</string>
+
+    <string name="second">Care Your Eyes</string>
+    <string name="second_content">Caring for your eyes should be Taken Seriously</string>
+
+    <string name="third">Check Your Eyesight</string>
+    <string name="third_content">If Problems on your eyes arises, please consult to your ophthalmologist, before getting serious</string>
+
+    <string name="fourth">Welcome To EyeCare</string>
+    <string name="fourth_content">Before Using Our services Please Login Into Your Account first</string>
+
     <string-array name="data_disease">
         <item>Crossed</item>
         <item>Uveitis</item>

@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.submission.eyecare.data.UserRepos
+import com.submission.eyecare.data.local.UserDisplayName
 import kotlinx.coroutines.launch
 
 class NotificationsViewModel(private val repo: UserRepos) : ViewModel() {
@@ -29,5 +30,8 @@ class NotificationsViewModel(private val repo: UserRepos) : ViewModel() {
         viewModelScope.launch {
             repo.saveTheme(isDark)
         }
+    }
+    fun fetchName(): LiveData<UserDisplayName> {
+        return repo.getName().asLiveData()
     }
 }

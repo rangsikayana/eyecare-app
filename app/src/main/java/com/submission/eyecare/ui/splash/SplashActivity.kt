@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatDelegate
 import com.submission.eyecare.databinding.ActivitySplashBinding
+import com.submission.eyecare.ui.LandingActivity
 import com.submission.eyecare.ui.auth.login.LoginActivity
 import com.submission.eyecare.ui.main.MainActivity
 import com.submission.eyecare.viewModels.VMFactory
@@ -30,7 +31,7 @@ class SplashActivity : AppCompatActivity() {
                 val move = if (check.isLogin) {
                     Intent(this, MainActivity::class.java)
                 } else {
-                    Intent(this, LoginActivity::class.java)
+                    Intent(this, LandingActivity::class.java)
                 }
                 startActivity(move)
                 finish()

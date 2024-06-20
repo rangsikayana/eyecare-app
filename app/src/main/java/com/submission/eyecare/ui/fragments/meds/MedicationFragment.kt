@@ -5,16 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView.OnQueryTextListener
+import androidx.appcompat.widget.SearchView
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.submission.eyecare.R
-import com.submission.eyecare.adapter.DiseaseAdapter
 import com.submission.eyecare.adapter.MedsAdapter
-import com.submission.eyecare.data.local.Diseases
 import com.submission.eyecare.data.local.Medications
-import com.submission.eyecare.databinding.FragmentHomeBinding
 import com.submission.eyecare.databinding.FragmentMedicationBinding
 import java.util.Locale
 
@@ -39,9 +35,8 @@ class MedicationFragment : Fragment() {
         setup()
 
         //fix search view or remove this
-        /*binding.searchMeds.setOnQueryTextListener(object : OnQueryTextListener
-        {
-            override fun onQueryTextSubmit(p0: String?): Boolean {
+        binding.searchMeds.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
             }
 
@@ -49,24 +44,22 @@ class MedicationFragment : Fragment() {
                 filterList(query)
                 return true
             }
-
-        })*/
-
+        })
         return root
     }
 
     private fun filterList(query: String?) {
         if (query != null) {
-            val filtered = ArrayList<Medications>()
-            for (i in itemList) {
-                if (i.name.toLowerCase(Locale.ROOT).contains(query)){
-                    filtered.add(i)
+            val filteredList = ArrayList<Medications>()
+            for (medication in itemList) {
+                if (medication.name.toLowerCase(Locale.ROOT).contains(query.toLowerCase(Locale.ROOT))) {
+                    filteredList.add(medication)
                 }
             }
-            if (filtered.isEmpty()) {
+            if (filteredList.isEmpty()) {
                 Toast.makeText(requireActivity(), "None Found", Toast.LENGTH_SHORT).show()
             } else {
-                medsAdapter.setFiltered(filtered)
+                medsAdapter.setFiltered(filteredList)
             }
         }
     }
@@ -78,10 +71,10 @@ class MedicationFragment : Fragment() {
 
     private fun setup() {
         val rv = binding.medsRv
-        val adapter = MedsAdapter(itemList)
+        medsAdapter = MedsAdapter(itemList)
         rv.setHasFixedSize(true)
         rv.layoutManager = GridLayoutManager(requireActivity(), 2)
-        rv.adapter = adapter
+        rv.adapter = medsAdapter
     }
 
     private fun getData(): ArrayList<Medications> {

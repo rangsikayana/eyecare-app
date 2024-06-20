@@ -2,6 +2,8 @@ package com.submission.eyecare.data
 
 import androidx.lifecycle.liveData
 import com.google.gson.Gson
+import com.submission.eyecare.data.local.LoginResult
+import com.submission.eyecare.data.local.UserDisplayName
 import com.submission.eyecare.data.network.ApiService
 import com.submission.eyecare.data.network.response.ErrorResponse
 import com.submission.eyecare.data.network.response.LoginResponse
@@ -13,6 +15,13 @@ class UserRepos private constructor(
     private val userPreference: UserPreference, private val api: ApiService) {
 
 
+    suspend fun saveName(name: UserDisplayName) {
+        userPreference.saveName(name)
+    }
+
+    fun getName(): Flow<UserDisplayName> {
+        return userPreference.getName()
+    }
     suspend fun saveSession(user: UserModel) {
         userPreference.saveSession(user)
     }
@@ -46,7 +55,8 @@ class UserRepos private constructor(
         try {
             val response = api.login(email, password)
             val uid = response.user?.uid
-            emit(Result.Success(uid))
+            val name = response.user?.displayName
+            emit(Result.Success(LoginResult(uid, name)))
         } catch (e: HttpException){
             val jsonString = e.response()?.errorBody()?.string()
             val errorBody = Gson().fromJson(jsonString, LoginResponse::class.java)

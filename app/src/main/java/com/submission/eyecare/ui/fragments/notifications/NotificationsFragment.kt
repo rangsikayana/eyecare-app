@@ -35,6 +35,11 @@ class NotificationsFragment : Fragment() {
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        notificationsViewModel.fetchName().observe(viewLifecycleOwner) {name ->
+            val uname = name.displayName
+            binding.display.text = uname
+        }
+
         notificationsViewModel.getTheme().observe(viewLifecycleOwner) { isDark: Boolean ->
             if (isDark) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)

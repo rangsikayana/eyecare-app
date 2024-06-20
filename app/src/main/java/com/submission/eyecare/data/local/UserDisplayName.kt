@@ -1,4 +1,4 @@
-package com.submission.eyecare.data
+package com.submission.eyecare.data.local
 
 
 //SAVE CONDITION

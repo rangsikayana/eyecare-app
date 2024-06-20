@@ -7,6 +7,7 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import com.submission.eyecare.data.local.UserDisplayName
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
@@ -16,6 +17,20 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
 
     private val themeKey = booleanPreferencesKey("theme_setting")
     private val nameKey = stringPreferencesKey("displayName")
+
+    suspend fun saveName(name: UserDisplayName) {
+        dataStore.edit { preference ->
+            preference[nameKey] = name.displayName
+        }
+    }
+
+    fun getName(): Flow<UserDisplayName> {
+        return dataStore.data.map { pref ->
+            UserDisplayName(
+                pref[nameKey] ?: ""
+            )
+        }
+    }
 
     fun getTheme(): Flow<Boolean> {
         return dataStore.data.map { preferances ->

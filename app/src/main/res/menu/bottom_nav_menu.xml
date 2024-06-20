@@ -11,11 +11,11 @@
         android:icon="@drawable/baseline_medication_24"
         android:title="Medication"/>
 
-    <item
+   <!-- <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/ic_baseline_search_24"
         android:title="Analyze" />
-
+-->
     <item
         android:id="@+id/navigation_History"
         android:icon="@drawable/baseline_content_paste_search_24"

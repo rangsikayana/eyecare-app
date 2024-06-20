@@ -33,7 +33,9 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <ImageView
+                    android:id="@+id/imageView4"
                     android:layout_width="60dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="20dp"
@@ -65,8 +67,11 @@
                     android:textColor="#FFFFFF"
                     android:textSize="28sp"
                     android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                    app:layout_constraintHorizontal_bias="0.058"
                     app:layout_constraintStart_toStartOf="@+id/greet"
                     app:layout_constraintTop_toBottomOf="@+id/greet" />
+
                 <TextView
                     android:id="@+id/condition"
                     android:layout_width="wrap_content"
@@ -81,71 +86,109 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/features"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Features"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/checkup"
-            app:layout_constraintTop_toBottomOf="@+id/checkup" />
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btn_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="8dp"
-            android:tooltipText="Test"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            app:fabCustomSize="70dp"
+            app:maxImageSize="40dp"
+            android:contentDescription="ColorBlind Test"
             android:src="@drawable/baseline_test_24"
-            app:layout_constraintStart_toStartOf="@+id/features"
-            app:layout_constraintTop_toBottomOf="@+id/features"
+            app:layout_constraintStart_toStartOf="@+id/checkup"
+            app:layout_constraintTop_toBottomOf="@+id/checkup"
             app:shapeAppearanceOverlay="@style/fab_3_rounded" />
 
+        <TextView
+            android:id="@+id/test_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Colorblind Test"
+            app:layout_constraintEnd_toEndOf="@+id/btn_test"
+            app:layout_constraintStart_toStartOf="@+id/btn_test"
+            app:layout_constraintTop_toBottomOf="@+id/btn_test" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btn_login"
+            android:id="@+id/btn_analyze"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="56dp"
+            app:fabCustomSize="70dp"
+            app:maxImageSize="40dp"
+            android:src="@drawable/ic_baseline_search_24"
             app:layout_constraintStart_toEndOf="@+id/btn_test"
             app:layout_constraintTop_toTopOf="@+id/btn_test"
             app:shapeAppearanceOverlay="@style/fab_3_rounded" />
 
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btn_register"
+        <TextView
+            android:id="@+id/analyze_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Analyze"
+            app:layout_constraintEnd_toEndOf="@+id/btn_analyze"
+            app:layout_constraintStart_toStartOf="@+id/btn_analyze"
+            app:layout_constraintTop_toBottomOf="@+id/btn_analyze" />
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_Cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:maxImageSize="40dp"
             android:layout_marginStart="56dp"
-            app:layout_constraintStart_toEndOf="@+id/btn_login"
-            app:layout_constraintTop_toTopOf="@+id/btn_login"
+            app:fabCustomSize="70dp"
+            android:src="@drawable/baseline_shopping_cart_24"
+            app:layout_constraintStart_toEndOf="@+id/btn_analyze"
+            app:layout_constraintTop_toTopOf="@+id/btn_analyze"
             app:shapeAppearanceOverlay="@style/fab_3_rounded" />
+
+        <TextView
+            android:id="@+id/cart_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Shopping Cart"
+            app:layout_constraintEnd_toEndOf="@+id/btn_Cart"
+            app:layout_constraintStart_toStartOf="@+id/btn_Cart"
+            app:layout_constraintTop_toBottomOf="@+id/btn_Cart" />
+
 
         <TextView
             android:id="@+id/Disease"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="8dp"
             android:text="You Might Want to Know"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/btn_test"
-            app:layout_constraintStart_toStartOf="@+id/btn_test"/>
+            app:layout_constraintStart_toStartOf="@+id/test_description"
+            app:layout_constraintTop_toBottomOf="@+id/test_description" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/Disease_rv"
             android:layout_width="match_parent"
             android:layout_height="190dp"
             android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
             app:layout_constraintStart_toStartOf="@+id/Disease"
             app:layout_constraintTop_toBottomOf="@+id/Disease"
             tools:listitem="@layout/disease_holder" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@+id/Disease_rv"
+            app:layout_constraintEnd_toStartOf="parent"
+            android:layout_marginTop="80dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
