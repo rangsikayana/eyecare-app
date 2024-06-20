@@ -34,7 +34,7 @@ class RegisterActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         binding.apply {
-            firstName = nameEditText
+            firstName = firstNameEditText
             lastName = LastNameEditText
             email = emailEditText
             pass = passwordEditText

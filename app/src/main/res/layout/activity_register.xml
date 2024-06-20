@@ -70,7 +70,7 @@
                 app:startIconDrawable="@drawable/baseline_person_24">
 
                 <com.submission.eyecare.ui.custom.CustomName
-                    android:id="@+id/nameEditText"
+                    android:id="@+id/firstNameEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="text" />
