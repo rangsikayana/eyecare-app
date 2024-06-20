@@ -69,17 +69,17 @@ The final model achieved a high accuracy on the test set, indicating its effecti
 
 | Metric              | Value     |
 |---------------------|-----------|
-| **Training Accuracy** | 87.93%    |
-| **Validation Accuracy** | 83.83%    |
-| **Test Accuracy**    | 89.26%    |
+| **Training Accuracy** | 84.24%    |
+| **Validation Accuracy** | 90.25%    |
+| **Test Accuracy**    | 92.31%    |
 
 #### Loss
 
 | Metric              | Value     |
 |---------------------|-----------|
-| **Training Loss**    | 0.3336    |
-| **Validation Loss**  | 0.6806    |
-| **Test Loss**        | 0.49017   |
+| **Training Loss**    | 0.3878    |
+| **Validation Loss**  | 0.3200    |
+| **Test Loss**        | 0.32743   |
 
 #### Classification Report
 
@@ -87,18 +87,18 @@ The classification report provides detailed insights into the model's performanc
 
 | Class         | Precision | Recall | F1-Score | Support |
 |---------------|-----------|--------|----------|---------|
-| Bulging_Eyes  | 0.95      | 1.00   | 0.98     | 21      |
-| Cataracts     | 0.89      | 0.89   | 0.89     | 19      |
-| Crossed_Eyes  | 0.84      | 0.84   | 0.84     | 19      |
-| Glaucoma      | 0.90      | 0.90   | 0.90     | 20      |
-| Normal_Eyes   | 0.79      | 0.90   | 0.84     | 21      |
-| Uveitis       | 1.00      | 0.81   | 0.89     | 21      |
-| **Accuracy**  |           |        | 0.89     | 121     |
-| **Macro Avg** | 0.90      | 0.89   | 0.89     | 121     |
-| **Weighted Avg** | 0.90  | 0.89   | 0.89     | 121     |
+| Bulging_Eyes  | 1.00      | 0.95   | 0.97     | 39      |
+| Cataracts     | 0.84      | 1.00   | 0.91     | 36      |
+| Crossed_Eyes  | 1.00      | 1.00   | 1.00     | 32      |
+| Glaucoma      | 0.80      | 0.80   | 0.80     | 20      |
+| Normal_Eyes   | 1.00      | 0.90   | 0.95     | 21      |
+| Uveitis       | 0.89      | 0.76   | 0.82     | 21      |
+| **Accuracy**  |           |        | 0.92     | 169     |
+| **Macro Avg** | 0.92      | 0.90   | 0.91     | 169     |
+| **Weighted Avg** | 0.93  | 0.92   | 0.92    | 169     |
 
 
 
 ## Conclusion
 
-This project successfully demonstrates the use of deep learning and transfer learning techniques for eye disease classification. The model can accurately identify six different eye conditions, which can assist in early diagnosis and treatment planning. The final model achieved a test accuracy of 89.26% with a test loss of 0.49017, indicating its effectiveness and reliability.
+This project successfully demonstrates the use of deep learning and transfer learning techniques for eye disease classification. The model can accurately identify six different eye conditions, which can assist in early diagnosis and treatment planning. The final model achieved a test accuracy of 92.31% with a test loss of 0.32743, indicating its effectiveness and reliability.
