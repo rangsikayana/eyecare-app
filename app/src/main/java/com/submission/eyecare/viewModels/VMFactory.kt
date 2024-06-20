@@ -9,6 +9,7 @@ import com.submission.eyecare.ui.auth.register.RegisterViewModel
 import com.submission.eyecare.ui.colorBlindTest.PlateViewModel
 import com.submission.eyecare.ui.fragments.home.HomeViewModel
 import com.submission.eyecare.ui.fragments.notifications.NotificationsViewModel
+import com.submission.eyecare.ui.scan.ScanViewModel
 import com.submission.eyecare.ui.splash.SplashViewModel
 import com.submission.eyecare.utils.Injection
 
@@ -25,8 +26,9 @@ class VMFactory private constructor(private val repo: UserRepos) : ViewModelProv
             return LoginViewModel(repo) as T
         } else if (modelClass.isAssignableFrom(RegisterViewModel::class.java)) {
             return RegisterViewModel(repo) as T
-        }
-        if (modelClass.isAssignableFrom(PlateViewModel::class.java)) {
+        } else if (modelClass.isAssignableFrom(ScanViewModel::class.java)){
+            return ScanViewModel(repo) as T
+        } else if (modelClass.isAssignableFrom(PlateViewModel::class.java)) {
             return PlateViewModel(repo) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

@@ -9,7 +9,8 @@ import com.submission.eyecare.data.network.ApiConfig
 object Injection {
     fun provideRepository(context: Context): UserRepos {
         val pref = UserPreference.getInstance(context.dataStore)
-        val api = ApiConfig.getServices()
-        return UserRepos.getInstance(pref, api)
+        val api1 = ApiConfig.getService1()
+        val api2 = ApiConfig.getService2()
+        return UserRepos.getInstance(pref, api1, api2)
     }
 }

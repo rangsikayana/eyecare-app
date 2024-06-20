@@ -19,6 +19,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "BASE_URL", "\"https://eyecare-server-gmn2d7rrwq-et.a.run.app/\"")
+        buildConfigField("String", "MODEL_URL", "\"http://34.50.79.203:5000/\"")
     }
 
     buildTypes {

@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfig {
     companion object {
-        fun getServices(): ApiService {
+        fun getRetrofit(baseUrl: String): Retrofit {
             val authInterceptor =
                 if(BuildConfig.DEBUG) {
                     HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -19,11 +19,19 @@ class ApiConfig {
                 .addInterceptor(authInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl(BuildConfig.BASE_URL)
+                .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
-            return retrofit.create(ApiService::class.java)
+            return retrofit
+        }
+
+        fun getService1(): ApiService {
+            return getRetrofit(BuildConfig.BASE_URL).create(ApiService::class.java)
+        }
+
+        fun getService2(): ApiService {
+            return getRetrofit(BuildConfig.MODEL_URL).create(ApiService::class.java)
         }
     }
 }

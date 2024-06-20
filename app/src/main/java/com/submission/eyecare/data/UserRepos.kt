@@ -7,12 +7,14 @@ import com.submission.eyecare.data.local.UserDisplayName
 import com.submission.eyecare.data.network.ApiService
 import com.submission.eyecare.data.network.response.ErrorResponse
 import com.submission.eyecare.data.network.response.LoginResponse
+import com.submission.eyecare.data.network.response.PredictResponse
 import com.submission.eyecare.utils.Result
 import kotlinx.coroutines.flow.Flow
+import okhttp3.MultipartBody
 import retrofit2.HttpException
 
 class UserRepos private constructor(
-    private val userPreference: UserPreference, private val api: ApiService) {
+    private val userPreference: UserPreference, private val api1: ApiService, private val api2: ApiService) {
 
 
     suspend fun saveName(name: UserDisplayName) {
@@ -53,7 +55,7 @@ class UserRepos private constructor(
     ) = liveData {
         emit(Result.Loading)
         try {
-            val response = api.login(email, password)
+            val response = api1.login(email, password)
             val uid = response.user?.uid
             val name = response.user?.displayName
             emit(Result.Success(LoginResult(uid, name)))
@@ -73,7 +75,7 @@ class UserRepos private constructor(
     ) = liveData {
         emit(Result.Loading)
         try {
-            val response = api.register(firstName, lastName, email, password )
+            val response = api1.register(firstName, lastName, email, password )
             val msg = response.message
             emit(Result.Success(msg))
         } catch (e: HttpException) {
@@ -92,13 +94,19 @@ class UserRepos private constructor(
             }
         }
     }
+
+    suspend fun uploadImage(file: MultipartBody.Part):PredictResponse {
+        return api2.uploadImage(file)
+    }
+
+
     companion object {
 
         @Volatile
         private var instance: UserRepos? = null
-        fun getInstance(userPreference: UserPreference, api: ApiService): UserRepos =
+        fun getInstance(userPreference: UserPreference, api1: ApiService, api2: ApiService): UserRepos =
             instance ?: synchronized(this) {
-                instance ?: UserRepos(userPreference, api)
+                instance ?: UserRepos(userPreference, api1, api2)
             }.also { instance = it }
     }
 

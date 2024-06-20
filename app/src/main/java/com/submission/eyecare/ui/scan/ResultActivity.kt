@@ -20,10 +20,10 @@ class ResultActivity : AppCompatActivity() {
         val img = Uri.parse(intent.getStringExtra(EXTRA_IMAGE_URI))
         val category = intent.getStringExtra(EXTRA_CATEGORY)
         val percentage = intent.getStringExtra(EXTRA_PERCENTAGE)
-        val diagnosis = intent.getStringExtra(EXTRA_DIAGNOSIS)
-        val treatment = intent.getStringExtra(EXTRA_TREATMENT)
-        val food = intent.getStringExtra(EXTRA_FOOD)
-        val vitamin = intent.getStringExtra(EXTRA_VITAMIN)
+//        val diagnosis = intent.getStringExtra(EXTRA_DIAGNOSIS)
+//        val treatment = intent.getStringExtra(EXTRA_TREATMENT)
+//        val food = intent.getStringExtra(EXTRA_FOOD)
+//        val vitamin = intent.getStringExtra(EXTRA_VITAMIN)
 
         runOnUiThread {
             img?.let {
@@ -35,18 +35,18 @@ class ResultActivity : AppCompatActivity() {
             percentage?.let {
                 binding.tvPercentage.text = it
             }
-            diagnosis?.let {
-                binding.tvResult.text = it
-            }
-            treatment?.let {
-                binding.tvEyetreatText.text = it
-            }
-            food?.let {
-                binding.tvFoodText.text = it
-            }
-            vitamin?.let {
-                binding.tvVitaminText.text = it
-            }
+//            diagnosis?.let {
+//                binding.tvResult.text = it
+//            }
+//            treatment?.let {
+//                binding.tvEyetreatText.text = it
+//            }
+//            food?.let {
+//                binding.tvFoodText.text = it
+//            }
+//            vitamin?.let {
+//                binding.tvVitaminText.text = it
+//            }
         }
         binding.button.setOnClickListener{
             startActivity(Intent(this, ScanActivity::class.java))
