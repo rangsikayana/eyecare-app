@@ -52,10 +52,7 @@ This step will explains how to install and deploy briefly :
    ```
 2. Download the dataset <br>
   [Link dataset](https://drive.google.com/drive/folders/1aA--HjGDswTQ_ZdB4_ErIAOo88JergX9?usp=sharing)
-3. Install All the Requirements Inside "requirements.txt"
-  ```bash
-   pip install -r Requirements.txt
-   ```
+
 3. Make a new virtual environment using Python
    ```bash
    python -m venv eyecare
@@ -122,8 +119,7 @@ Tools/IDE/Library and resources that Nusatala use to build the app :
     <img src="https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white" />
   - <a href="https://www.figma.com/" title="Figma" target="_blank">
     <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" />
-  - <a href="https://flask.palletsprojects.com/en/2.3.x/" title="Flask" target="_blank">
-    <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" />
+
 - API
   - Google APIs
 - Project Management
