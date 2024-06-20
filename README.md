@@ -2,6 +2,7 @@
 
 ## Overview
 The Eyecare App is a backend application designed to handle image classification for various eye conditions. It uses a pre-trained Keras model to predict the class of an uploaded image. The application is built using Node.js, Hapi.js, and Flask, and it includes custom error handling and routing.
+
     ```bash
     npm install
     ```
