@@ -128,7 +128,16 @@ Tools/IDE/Library and resources we used to build the app:
   - [![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)](https://trello.com/)
 
 ### C. Academic Papers
-*(List any academic papers referenced or used in the project)*
+- Amin, R., Ahmed, A., Hasan, S. S. U., & Akbar, H. (2022). Multiple Eye Disease Detection Using Deep Learning. *Foundation University Journal of Engineering and Applied Sciences*, 3(2), 14. [doi: 10.33897/fujeas.v3i2.689](https://doi.org/10.33897/fujeas.v3i2.689)
+
+- Febrina, C., Mariyana, R., Kartika, I. R., Rezkiki, F., & Heliayanti, S. (2023). Menjaga Kesehatan Mata di Era Digitalisasi. *Empowering Society Journal*, 4(1), 29-36.
+
+- Hubley, J., & Gilbert, C. (2006). Eye health promotion and the prevention of blindness in developing countries: critical issues. *British Journal of Ophthalmology*, 90(3), 279-284. [doi: 10.1136/bjo.2005.078451](https://doi.org/10.1136/bjo.2005.078451)
+
+- Risnasari, R., Kusumawaty, S., & Anggara, A. (2020). Uveitis anterior dengan katarak komplikata. *Jurnal Medical Profession (MedPro)*, 2(3), 196. Palu, Indonesia: Faculty of Medicine, Universitas Tadulako.
+
+- Widyandana, D., Prayogo, M. E., & Suhardjo. (2020). Eye disease early detection by primary health worker. *Journal of Community Empowerment for Health*, 3(3), 203-206. [doi: 10.22146/jcoemph.434181](https://doi.org/10.22146/jcoemph.434181)
+
 
 ## Presentation
 The EyeCare final presentation can be found here:
