@@ -7,7 +7,7 @@ See our wireframe <a href="https://www.figma.com/design/7yjvxqIIuj6zPrNkRZCxlJ/E
 
 - [EyeCare](#eyecare)
 - [Table of Content](#table-of-content)
-- [About Nusatala](#about-nusatala)
+- [About Nusatala](#about-eyecare)
   - [Background](#background)
   - [Goal \& Aim](#goal--aim)
   - [Installation \& Deployment](#installation--deployment)
