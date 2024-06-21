@@ -114,7 +114,7 @@ To stay on track, the EyeCare team uses a Gantt Chart with the Agile methodology
 
 ![Timeline](https://github.com/rangsikayana/eyecare-app/blob/dc8cdd1a7532695f12fa0d63c2928b3593c31dc3/assets/Gant%20chart.jpg)
 
-![Trello]()
+![Trello](https://github.com/rangsikayana/eyecare-app/blob/80d4b19ab2347a87b342da96121edd3317dbdf2f/assets/Trello%20Kanban%20board.png)
 
 ## Bibliography
 
@@ -149,8 +149,8 @@ The EyeCare final presentation can be found [here](#).
 
 ![EyeCare Presentation](#)
 
-[Link Presentation](#)
+[Link Presentation](https://docs.google.com/presentation/d/1SymhztUvO3dyTVISRKFlC7BjQb29CGKmPFE-cewOABw/edit?usp=sharing)
 
 ## Demo Video
-- [Link Demo](#)
-- [Link Youtube](#)
+- [Link Demo](https://drive.google.com/file/d/1wqZuTUIM-V-rMjNXJTWoACc9HzFaasHt/view)
+- [Link Youtube](https://bit.ly/Video-EyeCare)
