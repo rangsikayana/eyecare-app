@@ -93,6 +93,7 @@ Run the following command to install all the necessary dependencies:
 
 ```sh
 npm install @google-cloud/firestore@^7.1.0 @hapi/hapi@^21.3.2 @tensorflow/tfjs-node@^4.14.0 dotenv@^16.3.1 firebase@^10.12.2 firebase-admin@^12.1.1
+```
 
 
 ## How EyeCare Works
