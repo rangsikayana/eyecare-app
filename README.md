@@ -3,13 +3,9 @@ See our wireframe <a href="https://www.figma.com/design/7yjvxqIIuj6zPrNkRZCxlJ/E
 
 <br>
 
-![EyeCare Prototype](https://github.com/rangsikayana/eyecare-app/blob/ff8f02165b7359798eec6621e14ff7bca3c1abf2/assets/EyeCare-Prototype.mp4)
-
-
 # EyeCare: Your Personal Eye Health Companion
 ## Theme: Health Innovation: Empowering
 ### Bangkit Capstone Project 2024
-
 
 **Bangkit Capstone Team ID**: C241-PS466
 
