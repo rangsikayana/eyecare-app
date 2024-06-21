@@ -18,9 +18,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.google.gson.Gson
 import com.submission.eyecare.R
+import com.submission.eyecare.data.dummy.HistoryData
 import com.submission.eyecare.data.network.ApiConfig
 import com.submission.eyecare.databinding.ActivityScanBinding
 import com.submission.eyecare.ui.fragments.home.HomeViewModel
+import com.submission.eyecare.ui.fragments.test.HistoryViewModel
 import com.submission.eyecare.utils.getImageUri
 import com.submission.eyecare.utils.reduceFileImage
 import com.submission.eyecare.utils.showToast
@@ -57,6 +59,7 @@ class ScanActivity : AppCompatActivity() {
     private val scanViewModel: ScanViewModel by viewModels {
         VMFactory.getInstance(this)
     }
+    private val historyViewModel: HistoryViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -173,15 +176,29 @@ class ScanActivity : AppCompatActivity() {
 //        moveToResult(img, category, percentage, diagnosis, treatment, food, vitamins)
 //    }
 
-    private fun moveToResult(
-        imgUri: Uri?, category: String,
-        percent: Float,
-    ) {
+    private fun moveToResult(imgUri: Uri?, category: String, percent: Float) {
         val confidencePercentage = String.format("%.2f", percent).toDouble()
-        val intention = Intent(this, ResultActivity::class.java)
-        intention.putExtra(ResultActivity.EXTRA_IMAGE_URI, imgUri.toString())
-        intention.putExtra(ResultActivity.EXTRA_CATEGORY, category)
-        intention.putExtra(ResultActivity.EXTRA_PERCENTAGE, "$confidencePercentage%")
+
+        val imgPath = imgUri?.let { uriToFile(it, this).absolutePath } ?: ""
+
+        val historyData = HistoryData(
+            img = imgPath,
+            category = category,
+            percent = "$confidencePercentage%"
+        )
+
+        historyViewModel.insert(historyData)
+
+        val intention = Intent(this, ResultActivity::class.java).apply {
+            putExtra(ResultActivity.EXTRA_IMAGE_URI, imgUri.toString())
+            putExtra(ResultActivity.EXTRA_CATEGORY, category)
+            putExtra(ResultActivity.EXTRA_PERCENTAGE, "$confidencePercentage%")
+            imgUri?.let {
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+            }
+        }
+
         startActivity(intention)
         finish()
     }
