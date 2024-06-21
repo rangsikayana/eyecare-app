@@ -1,8 +1,6 @@
 # EyeCare
 See our wireframe <a href="https://www.figma.com/design/7yjvxqIIuj6zPrNkRZCxlJ/EyeCare-app?node-id=54795-2155&t=nxWxPQLLyFMWEk9I-0" title="Figma" target="_blank"><b>here</b></a>.
 
-<br>
-
 # EyeCare: Your Personal Eye Health Companion
 ## Theme: Health Innovation: Empowering
 ### Bangkit Capstone Project 2024
@@ -73,10 +71,27 @@ The datasets we used include:
 *(Add detailed steps for cloud computing backend installation here)*
 
 ## How EyeCare Works
-*(Explain the working of the EyeCare app here)*
+1. The EyeCare application functions by receiving input in the form of user images that show eye conditions such as cataracts, glaucoma, and others. 
+2. The images can be in PNG, JPG, or JPEG format. 
+3. Once the image is uploaded, the application predicts the eye condition using the eyecare.h5 model, which has been built with the pre-trained InceptionV3 algorithm.
+4. The output generated is the predicted type of eye disease corresponding to the labels in the dataset: "Bulging_Eyes," "Cataracts," "Crossed_Eyes," "Glaucoma," "Normal_eyes," and "Uveitis." 
+5. Based on the prediction, the system then provides recommendations for food, vitamins, and eye treatments.
 
 ## Project Scope
-*(Define the scope of the project here)*
+1. Input Data:
+
+- The application accepts images for eye disease detection.
+- Images must be in JPG format with a size of 224x224 pixels.
+- Classification is limited to the specified types of eye diseases.
+
+2. Eye Disease Classification:
+
+- In the initial development phase, only a few classifications of eye diseases will be used.
+
+3. Recommendations and No E-commerce System:
+
+- The application provides recommendations for food, vitamins, and eye treatments.
+- We do not provide an e-commerce system for the buying and selling of equipment or health products.
 
 ## Plans & Realization
 To stay on track, the EyeCare team uses a Gantt Chart with the Agile methodology. We use EyeCare for weekly sprint discussions. Here is our Gantt Chart:
