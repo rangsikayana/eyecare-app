@@ -108,12 +108,13 @@ The datasets we used include:
 *(Define the scope of the project here)*
 
 ## Plans & Realization
-To stay on track, the EyeCare team uses a Gantt Chart with the Agile methodology. We use Nusatala for weekly sprint discussions. Here is our Gantt Chart:
+To stay on track, the EyeCare team uses a Gantt Chart with the Agile methodology. We use EyeCare for weekly sprint discussions. Here is our Gantt Chart:
 
-- [EyeCare Gantt Chart](#)
-- ![Timeline](#)
-- ![Gantt Chart](#)
-- ![Trello](#)
+<a href="https://docs.google.com/spreadsheets/d/1Ctd2TDzmAwZdpHhR51sHbFc3sP_OoRfmCyJjpYqeANk/edit?gid=1115838130#gid=1115838130" title="EyeCare Timeline" target="_blank">EyeCare Timeline</a>
+
+![Timeline]()
+
+![Trello]()
 
 ## Bibliography
 
