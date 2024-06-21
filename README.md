@@ -3,8 +3,7 @@ See our wireframe <a href="https://www.figma.com/design/7yjvxqIIuj6zPrNkRZCxlJ/E
 
 <br>
 
-
-[![EyeCare Prototype](https://github.com/rangsikayana/eyecare-app/blob/5323154542fb256887d2d284c9df3e2fe493f0ca/assets/EyeCare-Prototype.jpg)](https://github.com/rangsikayana/eyecare-app/blob/5323154542fb256887d2d284c9df3e2fe493f0ca/assets/EyeCare-Prototype.mp4)
+![EyeCare Prototype](https://github.com/rangsikayana/eyecare-app/blob/ff8f02165b7359798eec6621e14ff7bca3c1abf2/assets/EyeCare-Prototype.mp4)
 
 
 # Table of Content
@@ -148,6 +147,7 @@ Tools/IDE/Library and resources we used to build the app:
 The EyeCare final presentation can be found here:
 
 <a href="https://docs.google.com/presentation/d/1SymhztUvO3dyTVISRKFlC7BjQb29CGKmPFE-cewOABw/edit?usp=sharingg" title="EyeCare Presentation" target="_blank">
+    <img src="https://github.com/Nusatala/.github/assets/70735803/bc2a165c-a742-4dd6-96ca-361a59a73ed6" alt="Jernihin Presentation Video" style="width: 500px">
 </a>
 
 [Link Presentation](https://docs.google.com/presentation/d/1SymhztUvO3dyTVISRKFlC7BjQb29CGKmPFE-cewOABw/edit?usp=sharing)
