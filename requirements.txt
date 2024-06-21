@@ -1,0 +1,6 @@
+@google-cloud/firestore
+@hapi/hapi
+@tensorflow/tfjs-node
+dotenv
+firebase
+firebase-admin

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Register</title>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form id="login-form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <br />
+      <button type="submit">Login</button>
+    </form>
+
+    <h1>Register</h1>
+    <form id="register-form">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required />
+      <br />
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" id="regEmail" name="email" required />
+      <br />
+      <label for="password">Password:</label>
+      <input type="password" id="regPassword" name="password" required />
+      <br />
+      <button type="submit">Register</button>
+    </form>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+      import {
+        getAuth,
+        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+      } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js";
+    //   import firebase from "/firebase;/compat/app";
+    //   import "../firebase/firestore"
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBl1T4ki48nC2F_n_OOt0P1Yg9WbiUehuE",
+        authDomain: "eyecare-app-123.firebaseapp.com",
+        projectId: "eyecare-app-123",
+        storageBucket: "eyecare-app-123.appspot.com",
+        messagingSenderId: "506619333364",
+        appId: "1:506619333364:web:2d3eae84f6aa4a15d62ca1",
+        measurementId: "G-RSPG2LWR43",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      
+      db._databaseId.database = "eyecare-database"
+    //   console.log(db);
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          try {
+            const userCredential = await signInWithEmailAndPassword(
+              auth,
+              email,
+              password
+            );
+            // console.log("User logged in:", userCredential.user);
+            alert("Login successful!");
+          } catch (error) {
+            console.error("Error logging in:", error);
+            alert(error);
+          }
+        });
+
+      document
+        .getElementById("register-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const firstName = document.getElementById("firstName").value;
+          const lastName = document.getElementById("lastName").value;
+          const email = document.getElementById("regEmail").value;
+          const password = document.getElementById("regPassword").value;
+
+          try {
+            const userCredential = await createUserWithEmailAndPassword(
+              auth,
+              email,
+              password
+            );
+            const user = userCredential.user;
+
+            // console.log("User created:", user);
+
+            const userRegisterForm = {
+              userId: user.uid,
+              firstName: firstName,
+              lastName: lastName,
+              email: email,
+            };
+
+            // console.log("halo1");
+            // Add user document to Firestore
+            await addDoc(collection(db, "users"), userRegisterForm);
+            // console.log("Document written with ID:", user.uid);
+            alert("Registration successful!");
+          } catch (error) {
+            console.error("Error registering:", error);
+            alert(error);
+          }
+        });
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  </body>
+</html>
