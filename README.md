@@ -112,7 +112,7 @@ To stay on track, the EyeCare team uses a Gantt Chart with the Agile methodology
 
 <a href="https://docs.google.com/spreadsheets/d/1Ctd2TDzmAwZdpHhR51sHbFc3sP_OoRfmCyJjpYqeANk/edit?gid=1115838130#gid=1115838130" title="EyeCare Timeline" target="_blank">EyeCare Timeline</a>
 
-![Timeline]()
+![Timeline](https://github.com/rangsikayana/eyecare-app/blob/dc8cdd1a7532695f12fa0d63c2928b3593c31dc3/assets/Gant%20chart.jpg)
 
 ![Trello]()
 
