@@ -76,7 +76,24 @@ The datasets we used include:
 or you can download the APK [here](https://drive.google.com/file/d/11Oo95MA2RXL5gAZMVRO3HeGcHzObtsKH/view)
 
 ### Cloud Computing - Backend Project Installation
-*(Add detailed steps for cloud computing backend installation here)*
+
+Follow these steps to install the necessary dependencies for this project using npm:
+
+1: Ensure Node.js and npm are installed
+
+Make sure you have Node.js and npm installed on your machine. You can download and install them from [Node.js official website](https://nodejs.org/).
+
+2: Initialize your project
+
+If you haven't already initialized your project, run the following command in your project directory to create a `package.json` file:
+
+3: Install dependencies
+
+Run the following command to install all the necessary dependencies:
+
+```sh
+npm install @google-cloud/firestore@^7.1.0 @hapi/hapi@^21.3.2 @tensorflow/tfjs-node@^4.14.0 dotenv@^16.3.1 firebase@^10.12.2 firebase-admin@^12.1.1
+
 
 ## How EyeCare Works
 1. The EyeCare application functions by receiving input in the form of user images that show eye conditions such as cataracts, glaucoma, and others. 
