@@ -69,7 +69,6 @@ The datasets we used include:
 - Combined_Eye_Disease.zip dataset
 
 ## Goals & Aims
-*(Detail the specific goals and aims of the project here)*
 
 ## Installation & Deployment
 
