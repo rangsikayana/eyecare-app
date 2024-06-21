@@ -10,7 +10,7 @@ See our wireframe <a href="https://www.figma.com/design/7yjvxqIIuj6zPrNkRZCxlJ/E
 
 - [EyeCare](#eyecare)
 - [Table of Content](#table-of-content)
-- [About EyeCare](#about-eyecare)
+- [About EyeCare](https://github.com/rangsikayana/eyecare-app/tree/main?tab=readme-ov-file#eyecare-your-personal-eye-health-companion)
   - [Our Team](#our-team)
   - [Goal \& Aim](#goal--aim)
   - [Installation \& Deployment](#installation--deployment)
