@@ -6,30 +6,6 @@ See our wireframe <a href="https://www.figma.com/design/7yjvxqIIuj6zPrNkRZCxlJ/E
 ![EyeCare Prototype](https://github.com/rangsikayana/eyecare-app/blob/ff8f02165b7359798eec6621e14ff7bca3c1abf2/assets/EyeCare-Prototype.mp4)
 
 
-# Table of Content
-
-- [EyeCare](#eyecare)
-- [Table of Content](#table-of-content)
-- [About EyeCare](https://github.com/rangsikayana/eyecare-app/tree/main?tab=readme-ov-file#eyecare-your-personal-eye-health-companion)
-  - [Our Team](#our-team)
-  - [Goal \& Aim](#goal--aim)
-  - [Installation \& Deployment](#installation--deployment)
-    - [Machine Learning - Project Installation to Personal Virtual Environment](#machine-learning---project-installation-to-personal-virtual-environment)
-    - [Deploy Machine Learning Model with Compute Engine on Google Cloud Platform](#deploy-machine-learning-model-with-cloudrun-on-google-cloud-platform)
-    - [Mobile Development - Project Installation](#mobile-development---project-installation)
-    - [Cloud Computing - Backend Project Installation](#cloud-computing---backend-project-installation)
-  - [How EyeCare Works](#how-eyecare-works)
-  - [Plans \& Realization](#plans--realization)
-  - [Project Scope](#how-eyecare-works)
-  - [Bibliography](#bibliography)
-    - [A. Dataset](#a-dataset)
-    - [B. Resources](#b-resources)
-    - [C. Academic Papers](#c-academic-papers)
-  - [Presentation](#presentation)
-  - [Demo Video](#demo-video)
-
-<br>
-
 # EyeCare: Your Personal Eye Health Companion
 ## Theme: Health Innovation: Empowering
 ### Bangkit Capstone Project 2024
