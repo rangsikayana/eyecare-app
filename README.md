@@ -65,7 +65,16 @@ The datasets we used include:
    ```
 
 ### Mobile Development - Project Installation
-*(Add detailed steps for mobile development installation here)*
+### Mobile Development - Project Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/rangsikayana/eyecare-app.git
+   ```
+2. Open the project in Android Studio
+3. Install dependencies
+4. Build the project
+
+or you can download the APK [here](https://drive.google.com/file/d/11Oo95MA2RXL5gAZMVRO3HeGcHzObtsKH/view)
 
 ### Cloud Computing - Backend Project Installation
 *(Add detailed steps for cloud computing backend installation here)*
