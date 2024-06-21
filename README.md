@@ -145,7 +145,11 @@ Tools/IDE/Library and resources we used to build the app:
 *(List any academic papers referenced or used in the project)*
 
 ## Presentation
-The EyeCare final presentation can be found [here](#).
+The EyeCare final presentation can be found here:
+
+<a href="https://docs.google.com/presentation/d/1SymhztUvO3dyTVISRKFlC7BjQb29CGKmPFE-cewOABw/edit?usp=sharingg" title="EyeCare Presentation" target="_blank">
+  <img src="https://github.com/Nusatala/.github/assets/70735803/bc2a165c-a742-4dd6-96ca-361a59a73ed6" alt="Jernihin Presentation Video" style="width: 500px">
+</a>
 
 ![EyeCare Presentation](#)
 
