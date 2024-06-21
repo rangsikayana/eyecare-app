@@ -4,7 +4,7 @@ See our wireframe <a href="https://www.figma.com/design/7yjvxqIIuj6zPrNkRZCxlJ/E
 <br>
 
 
-https://github.com/rangsikayana/eyecare-app/blob/5323154542fb256887d2d284c9df3e2fe493f0ca/assets/EyeCare-Prototype.mp4
+[![EyeCare Prototype](https://github.com/rangsikayana/eyecare-app/blob/5323154542fb256887d2d284c9df3e2fe493f0ca/assets/EyeCare-Prototype.jpg)](https://github.com/rangsikayana/eyecare-app/blob/5323154542fb256887d2d284c9df3e2fe493f0ca/assets/EyeCare-Prototype.mp4)
 
 
 # Table of Content
