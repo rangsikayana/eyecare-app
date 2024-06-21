@@ -65,7 +65,6 @@ The datasets we used include:
    ```
 
 ### Mobile Development - Project Installation
-### Mobile Development - Project Installation
 1. Clone this repository:
    ```bash
    git clone https://github.com/rangsikayana/eyecare-app.git
