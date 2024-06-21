@@ -13,7 +13,8 @@ import com.submission.eyecare.ui.scan.ScanViewModel
 import com.submission.eyecare.ui.splash.SplashViewModel
 import com.submission.eyecare.utils.Injection
 
-class VMFactory private constructor(private val repo: UserRepos) : ViewModelProvider.NewInstanceFactory() {
+class VMFactory private constructor(private val repo: UserRepos) :
+    ViewModelProvider.NewInstanceFactory() {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(HomeViewModel::class.java)) {
@@ -26,16 +27,18 @@ class VMFactory private constructor(private val repo: UserRepos) : ViewModelProv
             return LoginViewModel(repo) as T
         } else if (modelClass.isAssignableFrom(RegisterViewModel::class.java)) {
             return RegisterViewModel(repo) as T
-        } else if (modelClass.isAssignableFrom(ScanViewModel::class.java)){
+        } else if (modelClass.isAssignableFrom(ScanViewModel::class.java)) {
             return ScanViewModel(repo) as T
         } else if (modelClass.isAssignableFrom(PlateViewModel::class.java)) {
             return PlateViewModel(repo) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
     }
+
     companion object {
         @Volatile
         private var INSTANCE: VMFactory? = null
+
         @JvmStatic
         fun getInstance(context: Context): VMFactory {
             if (INSTANCE == null) {

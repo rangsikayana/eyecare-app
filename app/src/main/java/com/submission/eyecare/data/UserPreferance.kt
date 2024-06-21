@@ -38,11 +38,12 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         }
     }
 
-    suspend fun saveTheme(isDark : Boolean) {
+    suspend fun saveTheme(isDark: Boolean) {
         dataStore.edit { preferences ->
             preferences[themeKey] = isDark
         }
     }
+
     //Setup displayName and condition
     suspend fun saveSession(user: UserModel) {
         dataStore.edit { preferences ->

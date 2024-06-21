@@ -8,14 +8,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.submission.eyecare.databinding.FragmentDashboardBinding
-import com.submission.eyecare.ui.scan.ScanActivity
 import com.submission.eyecare.utils.getImageUri
 import com.submission.eyecare.utils.showToast
 
@@ -29,12 +27,13 @@ class DashboardFragment : Fragment() {
             ActivityResultContracts.RequestPermission()
         ) { isGranted: Boolean ->
             if (isGranted) {
-                showToast(requireActivity(),"Permission request granted")
+                showToast(requireActivity(), "Permission request granted")
             } else {
-                showToast(requireActivity(),"Permission request denied")
+                showToast(requireActivity(), "Permission request denied")
             }
 
         }
+
     private fun allPermissionsGranted() =
         ContextCompat.checkSelfPermission(
             requireActivity(),
@@ -57,10 +56,10 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-      /*  val textView: TextView = binding.textName
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }*/
+        /*  val textView: TextView = binding.textName
+          dashboardViewModel.text.observe(viewLifecycleOwner) {
+              textView.text = it
+          }*/
 
         if (!allPermissionsGranted()) {
             requestPermissionLauncher.launch(REQUIRED_PERMISSION)

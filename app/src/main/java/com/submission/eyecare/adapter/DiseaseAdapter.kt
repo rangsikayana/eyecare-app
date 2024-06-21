@@ -10,9 +10,11 @@ import com.submission.eyecare.data.local.Diseases
 import com.submission.eyecare.databinding.DiseaseHolderBinding
 import com.submission.eyecare.ui.InfoActivity
 
-class DiseaseAdapter(private val list: ArrayList<Diseases>): RecyclerView.Adapter<DiseaseAdapter.DiseaseViewHolder>() {
+class DiseaseAdapter(private val list: ArrayList<Diseases>) :
+    RecyclerView.Adapter<DiseaseAdapter.DiseaseViewHolder>() {
 
-    inner class DiseaseViewHolder(private val bind: DiseaseHolderBinding) : RecyclerView.ViewHolder(bind.root) {
+    inner class DiseaseViewHolder(private val bind: DiseaseHolderBinding) :
+        RecyclerView.ViewHolder(bind.root) {
         fun insert(item: Diseases) {
             val desc = item.desc
             val img = item.pic
@@ -21,7 +23,7 @@ class DiseaseAdapter(private val list: ArrayList<Diseases>): RecyclerView.Adapte
                 Glide.with(itemView)
                     .load(img)
                     .into(icDisease)
-                disBtn.setOnClickListener{
+                disBtn.setOnClickListener {
                     val intent = Intent(it.context, InfoActivity::class.java)
                     intent.putExtra(InfoActivity.EXTRA_DESC, desc)
                     intent.putExtra(InfoActivity.EXTRA_DISEASE, item.name)
@@ -33,7 +35,7 @@ class DiseaseAdapter(private val list: ArrayList<Diseases>): RecyclerView.Adapte
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DiseaseViewHolder {
-       val bind = DiseaseHolderBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val bind = DiseaseHolderBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return DiseaseViewHolder(bind)
     }
 
@@ -46,13 +48,17 @@ class DiseaseAdapter(private val list: ArrayList<Diseases>): RecyclerView.Adapte
         holder.insert(item)
 
     }
-    fun newList(new: ArrayList<Diseases>){
+
+    fun newList(new: ArrayList<Diseases>) {
         val next = DiffUtil.calculateDiff(DIFFCALLBACK(list, new))
         list.clear()
         next.dispatchUpdatesTo(this)
     }
 
-    class DIFFCALLBACK(private val oldList: ArrayList<Diseases>, private val newList: ArrayList<Diseases>) :
+    class DIFFCALLBACK(
+        private val oldList: ArrayList<Diseases>,
+        private val newList: ArrayList<Diseases>
+    ) :
         DiffUtil.Callback() {
         override fun getOldListSize(): Int = oldList.size
         override fun getNewListSize(): Int = newList.size

@@ -2,11 +2,10 @@ package com.submission.eyecare.ui
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
-import com.submission.eyecare.R
+import androidx.appcompat.app.AppCompatActivity
 import com.submission.eyecare.databinding.ActivityLandingBinding
 import com.submission.eyecare.ui.auth.login.LoginActivity
 
@@ -19,7 +18,7 @@ class LandingActivity : AppCompatActivity() {
 
         setupView()
 
-        binding.button.setOnClickListener{
+        binding.button.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
     }

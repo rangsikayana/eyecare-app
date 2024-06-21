@@ -1,12 +1,9 @@
 package com.submission.eyecare.ui.colorBlindTest
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.viewModels
-import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.appcompat.app.AppCompatActivity
 import com.submission.eyecare.R
 import com.submission.eyecare.databinding.ActivityColorTestBinding
-import com.submission.eyecare.viewModels.VMFactory
 
 
 class ColorTestActivity : AppCompatActivity() {

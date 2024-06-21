@@ -47,93 +47,31 @@
             app:layout_constraintStart_toEndOf="@+id/tvCategory"
             app:layout_constraintTop_toBottomOf="@+id/result_image" />
 
-
         <TextView
-            android:id="@+id/tvResult"
+            android:id="@+id/tvKnowledgeTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
             android:layout_marginTop="16dp"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvCategory"
-            app:layout_constraintStart_toStartOf="@+id/tvCategory"
-            app:layout_constraintTop_toBottomOf="@+id/tvCategory"
-            tools:text="Diagnose text" />
-
-
-        <TextView
-            android:id="@+id/tvEyetreatTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginTop="16dp"
-            android:text="Eye Treatment"
-            android:textSize="20sp"
-            android:textStyle="italic|bold"
-            app:layout_constraintEnd_toEndOf="@+id/tvResult"
-            app:layout_constraintStart_toStartOf="@+id/tvResult"
-            app:layout_constraintTop_toBottomOf="@+id/tvResult" />
+            android:text="Base Knowledge"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCategory" />
 
         <TextView
-            android:id="@+id/tvEyetreatText"
+            android:id="@+id/tvKnowledgeContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
             android:layout_marginTop="8dp"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvEyetreatTitle"
-            app:layout_constraintStart_toStartOf="@+id/tvEyetreatTitle"
-            app:layout_constraintTop_toBottomOf="@+id/tvEyetreatTitle"
-            tools:text="@tools:sample/lorem" />
-
-        <TextView
-            android:id="@+id/tvFoodTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginTop="16dp"
-            android:text="Recommended Food"
-            android:textSize="20sp"
-            android:textStyle="italic|bold"
-            app:layout_constraintEnd_toEndOf="@+id/tvEyetreatText"
-            app:layout_constraintStart_toStartOf="@+id/tvEyetreatText"
-            app:layout_constraintTop_toBottomOf="@+id/tvEyetreatText" />
-
-        <TextView
-            android:id="@+id/tvFoodText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginTop="8dp"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvFoodTitle"
-            app:layout_constraintStart_toStartOf="@+id/tvFoodTitle"
-            app:layout_constraintTop_toBottomOf="@+id/tvFoodTitle"
-            tools:text="@tools:sample/lorem" />
-
-        <TextView
-            android:id="@+id/tvVitaminTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginTop="16dp"
-            android:text="Vitamin"
-            android:textSize="20sp"
-            android:textStyle="italic|bold"
-            app:layout_constraintEnd_toEndOf="@+id/tvFoodText"
-            app:layout_constraintStart_toStartOf="@+id/tvFoodText"
-            app:layout_constraintTop_toBottomOf="@+id/tvFoodText" />
-
-        <TextView
-            android:id="@+id/tvVitaminText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginTop="8dp"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@+id/tvVitaminTitle"
-            app:layout_constraintStart_toStartOf="@+id/tvVitaminTitle"
-            app:layout_constraintTop_toBottomOf="@+id/tvVitaminTitle"
+            android:textSize="18sp"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvKnowledgeTitle"
             tools:text="@tools:sample/lorem" />
 
 
@@ -144,7 +82,7 @@
             android:layout_margin="16dp"
             android:layout_marginTop="16dp"
             android:text="Scan Again"
-            app:layout_constraintTop_toBottomOf="@+id/tvVitaminText"
+            app:layout_constraintTop_toBottomOf="@+id/tvKnowledgeContent"
             tools:layout_editor_absoluteX="16dp" />
 
 

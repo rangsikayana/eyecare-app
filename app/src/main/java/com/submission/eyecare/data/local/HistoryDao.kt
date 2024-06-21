@@ -6,7 +6,6 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.submission.eyecare.data.dummy.HistoryData
 
 @Dao
 interface HistoryDao {
@@ -18,6 +17,7 @@ interface HistoryDao {
 
     @Delete
     suspend fun delete(historyData: HistoryData)
+
     @Query("DELETE FROM history_table")
     suspend fun clearHistory()
 

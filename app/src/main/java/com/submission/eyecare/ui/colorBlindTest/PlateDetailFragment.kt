@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.submission.eyecare.data.IshiharaPlate
+import com.submission.eyecare.data.local.IshiharaPlate
 import com.submission.eyecare.databinding.FragmentPlateDetailBinding
 
 class PlateDetailFragment : Fragment() {

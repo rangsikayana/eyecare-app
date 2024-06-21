@@ -10,8 +10,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.submission.eyecare.data.dummy.HistoryAdapter
-import com.submission.eyecare.data.dummy.HistoryData
 import com.submission.eyecare.databinding.FragmentTestBinding
 import com.submission.eyecare.ui.scan.ResultActivity
 

@@ -1,4 +1,4 @@
-package com.submission.eyecare.data.dummy
+package com.submission.eyecare.data.local
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo

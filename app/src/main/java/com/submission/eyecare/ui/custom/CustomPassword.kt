@@ -8,22 +8,36 @@ import android.util.AttributeSet
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
 
-class CustomPassword: AppCompatEditText {
+class CustomPassword : AppCompatEditText {
 
     var isValid = false
 
-    constructor(context: Context): super(context) {initialize()}
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {initialize()}
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int): super(context,attrs, defStyleAttr) {initialize()}
+    constructor(context: Context) : super(context) {
+        initialize()
+    }
+
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
+        initialize()
+    }
+
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
+        initialize()
+    }
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         textAlignment = View.TEXT_ALIGNMENT_VIEW_START
     }
+
     private fun initialize() {
         addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
+
             override fun onTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 isValid = (text?.length ?: 0) >= 8
                 if (!isValid) {
@@ -32,6 +46,7 @@ class CustomPassword: AppCompatEditText {
                     error = null
                 }
             }
+
             override fun afterTextChanged(s: Editable?) {
             }
         })

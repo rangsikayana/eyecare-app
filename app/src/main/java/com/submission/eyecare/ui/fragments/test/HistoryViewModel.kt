@@ -5,7 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.submission.eyecare.data.HistoryRepository
-import com.submission.eyecare.data.dummy.HistoryData
+import com.submission.eyecare.data.local.HistoryData
 import com.submission.eyecare.data.local.HistoryDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

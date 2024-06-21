@@ -1,12 +1,12 @@
 package com.submission.eyecare.ui.auth.register
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.submission.eyecare.databinding.ActivityRegisterBinding
 import com.submission.eyecare.ui.auth.login.LoginActivity
 import com.submission.eyecare.ui.custom.CustomMail
@@ -26,6 +26,7 @@ class RegisterActivity : AppCompatActivity() {
     private val registerViewModel: RegisterViewModel by viewModels {
         VMFactory.getInstance(this)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
@@ -38,7 +39,7 @@ class RegisterActivity : AppCompatActivity() {
             lastName = LastNameEditText
             email = emailEditText
             pass = passwordEditText
-            btnRegister.setOnClickListener{
+            btnRegister.setOnClickListener {
                 retrieve()
             }
         }
@@ -50,7 +51,7 @@ class RegisterActivity : AppCompatActivity() {
         val lastNameResult = lastName.text.toString()
         val emailResult = email.text.toString()
         val passResult = pass.text.toString()
-        registerCredential(firstNameResult,lastNameResult,emailResult, passResult)
+        registerCredential(firstNameResult, lastNameResult, emailResult, passResult)
     }
 
     private fun registerCredential(
@@ -59,16 +60,18 @@ class RegisterActivity : AppCompatActivity() {
     ) {
         registerViewModel.register(first, last, email, pass).observe(this) { res ->
             if (res != null) {
-                when(res) {
+                when (res) {
                     is Result.Success -> {
                         isLoad(false)
                         showToast(res.data.toString())
                         setDialogOK()
                     }
+
                     is Result.Error -> {
                         isLoad(false)
                         showToast(res.error)
                     }
+
                     is Result.Loading -> {
                         isLoad(true)
                     }
@@ -81,7 +84,7 @@ class RegisterActivity : AppCompatActivity() {
         AlertDialog.Builder(this).apply {
             setTitle("Congratulations")
             setMessage("Your Credential Have Been Registered")
-            setPositiveButton("Continue") {_, _ ->
+            setPositiveButton("Continue") { _, _ ->
                 val move = Intent(context, LoginActivity::class.java)
                 move.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(move)

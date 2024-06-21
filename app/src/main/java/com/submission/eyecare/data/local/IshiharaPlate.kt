@@ -1,4 +1,4 @@
-package com.submission.eyecare.data
+package com.submission.eyecare.data.local
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

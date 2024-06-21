@@ -12,39 +12,39 @@
         android:layout_height="wrap_content">
 
 
-    <ImageView
-        android:id="@+id/info_img"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        <ImageView
+            android:id="@+id/info_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
 
-    <TextView
-        android:id="@+id/info_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Category"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/info_img"
-        app:layout_constraintTop_toBottomOf="@+id/info_img" />
+        <TextView
+            android:id="@+id/info_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Category"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/info_img"
+            app:layout_constraintTop_toBottomOf="@+id/info_img" />
 
-    <TextView
-        android:id="@+id/info_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:text="Lorem Ipsum"
-        android:textAlignment="textStart"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/info_header"
-        app:layout_constraintTop_toBottomOf="@+id/info_header" />
+        <TextView
+            android:id="@+id/info_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:text="Lorem Ipsum"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/info_header"
+            app:layout_constraintTop_toBottomOf="@+id/info_header" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

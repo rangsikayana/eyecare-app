@@ -11,7 +11,7 @@ import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
 import com.submission.eyecare.R
 
-class CustomMail: AppCompatEditText, View.OnFocusChangeListener {
+class CustomMail : AppCompatEditText, View.OnFocusChangeListener {
 
     private lateinit var same: String
     private var isMailTaken = false
@@ -46,7 +46,7 @@ class CustomMail: AppCompatEditText, View.OnFocusChangeListener {
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-      /*  hint = "Input User Email"*/
+        /*  hint = "Input User Email"*/
         textAlignment = View.TEXT_ALIGNMENT_VIEW_START
     }
 

@@ -13,7 +13,7 @@ import okhttp3.MultipartBody
 import retrofit2.HttpException
 import java.net.ProtocolException
 
-class ScanViewModel(private val repo: UserRepos): ViewModel() {
+class ScanViewModel(private val repo: UserRepos) : ViewModel() {
     private val _uploadResult = MutableLiveData<PredictResponse?>()
     val uploadResult: LiveData<PredictResponse?> = _uploadResult
 

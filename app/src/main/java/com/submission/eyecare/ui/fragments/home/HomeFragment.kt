@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
@@ -59,13 +60,12 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireActivity(), ColorTestActivity::class.java))
         }
 
-        //to Access login and register
         binding.btnAnalyze.setOnClickListener{
             startActivity(Intent(requireActivity(), ScanActivity::class.java))
         }
 
         binding.btnCart.setOnClickListener{
-            startActivity(Intent(requireActivity(), RegisterActivity::class.java))
+            Toast.makeText(requireContext(), "Additional feature in the future", Toast.LENGTH_SHORT).show()
         }
         return root
     }
@@ -90,4 +90,5 @@ class HomeFragment : Fragment() {
         }
         return listDis
     }
+
 }

@@ -10,6 +10,7 @@ class SplashViewModel(private val repo: UserRepos) : ViewModel() {
     fun getTheme(): LiveData<Boolean> {
         return repo.getTheme().asLiveData()
     }
+
     fun fetchSession(): LiveData<UserModel> {
         return repo.getSession().asLiveData()
     }

@@ -4,9 +4,9 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Medications(
-    val url: String,
-    val name: String,
-    val overview: String,
-    val about: String
+data class BaseKnowledge(
+    val category: String,
+    val food: String,
+    val vitamin: String,
+    val eyeTreatment: String,
 ) : Parcelable

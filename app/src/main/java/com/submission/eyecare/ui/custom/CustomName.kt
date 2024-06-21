@@ -10,11 +10,23 @@ import androidx.appcompat.widget.AppCompatEditText
 import com.submission.eyecare.R
 
 class CustomName : AppCompatEditText {
-    private var  isValid = false
+    private var isValid = false
 
-    constructor(context: Context): super(context) {initialize()}
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {initialize()}
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int): super(context,attrs, defStyleAttr) {initialize()}
+    constructor(context: Context) : super(context) {
+        initialize()
+    }
+
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
+        initialize()
+    }
+
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
+        initialize()
+    }
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
@@ -28,12 +40,13 @@ class CustomName : AppCompatEditText {
 
             override fun onTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 isValid = text.toString().trim().isNotEmpty()
-                error = if(!isValid){
+                error = if (!isValid) {
                     resources.getString(R.string.Empty)
                 } else {
                     null
                 }
             }
+
             override fun afterTextChanged(s: Editable?) {
             }
         })

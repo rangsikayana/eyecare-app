@@ -2,9 +2,10 @@ package com.submission.eyecare.ui.scan
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.submission.eyecare.data.local.baseKnowledgeData
 import com.submission.eyecare.databinding.ActivityResultBinding
 import java.io.File
 
@@ -37,14 +38,35 @@ class ResultActivity : AppCompatActivity() {
             }
             category?.let {
                 binding.tvCategory.text = it
+                displayBaseKnowledge(it)
             }
             percentage?.let {
                 binding.tvPercentage.text = it
             }
         }
+
         binding.button.setOnClickListener {
             startActivity(Intent(this, ScanActivity::class.java))
             finish()
+        }
+    }
+
+    private fun displayBaseKnowledge(category: String) {
+        val knowledge = baseKnowledgeData.baseKnowledge.find { it.category == category }
+        knowledge?.let {
+            val content = """
+                Eye Treatment:
+                ${it.eyeTreatment}
+                
+                Recommended Food:
+                ${it.food}
+                
+                Vitamin:
+                ${it.vitamin}
+            """.trimIndent()
+
+            binding.tvKnowledgeTitle.text = "Base Knowledge for $category"
+            binding.tvKnowledgeContent.text = content
         }
     }
 

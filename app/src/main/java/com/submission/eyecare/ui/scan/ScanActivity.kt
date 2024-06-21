@@ -13,26 +13,18 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
-import com.google.gson.Gson
-import com.submission.eyecare.R
-import com.submission.eyecare.data.dummy.HistoryData
-import com.submission.eyecare.data.network.ApiConfig
+import com.submission.eyecare.data.local.HistoryData
 import com.submission.eyecare.databinding.ActivityScanBinding
-import com.submission.eyecare.ui.fragments.home.HomeViewModel
 import com.submission.eyecare.ui.fragments.test.HistoryViewModel
 import com.submission.eyecare.utils.getImageUri
 import com.submission.eyecare.utils.reduceFileImage
 import com.submission.eyecare.utils.showToast
 import com.submission.eyecare.utils.uriToFile
 import com.submission.eyecare.viewModels.VMFactory
-import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
-import retrofit2.HttpException
 
 class ScanActivity : AppCompatActivity() {
 

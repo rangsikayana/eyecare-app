@@ -21,14 +21,12 @@
             app:layout_constraintStart_toStartOf="parent" />
 
 
-
-
         <TextView
             android:id="@+id/instruction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
             android:layout_marginStart="14dp"
+            android:layout_marginTop="52dp"
             android:layout_marginEnd="14dp"
             android:padding="10dp"
             android:text="Kindly Upload an Image of your Eyes and We will Scan it to Asses your Eye Health"
@@ -56,8 +54,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:scaleType="fitCenter"
             android:background="@drawable/grad_theme"
+            android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/instruction"
@@ -70,8 +68,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="64dp"
             android:layout_marginTop="48dp"
-            app:fabCustomSize="60dp"
             android:src="@drawable/ic_place_holder"
+            app:fabCustomSize="60dp"
             app:layout_constraintBottom_toBottomOf="@+id/gallery_point"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivPreview"
@@ -92,18 +90,18 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnAnalyze"
-            app:shapeAppearanceOverlay="@style/fab_3_rounded"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
             android:layout_marginTop="32dp"
-            app:fabCustomSize="80dp"
-            android:src="@drawable/ic_baseline_search_24"
-            app:maxImageSize="40dp"
             android:backgroundTint="#FF8000"
+            android:src="@drawable/ic_baseline_search_24"
+            app:fabCustomSize="80dp"
+            app:layout_constraintBottom_toBottomOf="@id/scan_point"
             app:layout_constraintStart_toEndOf="@id/btnGallery"
             app:layout_constraintTop_toBottomOf="@+id/ivPreview"
-            app:layout_constraintBottom_toBottomOf="@id/scan_point"/>
+            app:maxImageSize="40dp"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded" />
 
         <TextView
             android:id="@+id/gallery_point"
@@ -144,8 +142,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:text=""
-            app:layout_constraintTop_toBottomOf="@+id/scan_point"
-            app:layout_constraintStart_toStartOf="@id/scan_point"/>
+            app:layout_constraintStart_toStartOf="@id/scan_point"
+            app:layout_constraintTop_toBottomOf="@+id/scan_point" />
 
         <TextView
             android:id="@+id/resultTextView"
@@ -162,7 +160,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </ScrollView>

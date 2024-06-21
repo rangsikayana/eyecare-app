@@ -1,15 +1,14 @@
 package com.submission.eyecare.data.network
 
-import com.submission.eyecare.data.network.response.RegisterResponse
 import com.submission.eyecare.data.network.response.LoginResponse
 import com.submission.eyecare.data.network.response.PredictResponse
+import com.submission.eyecare.data.network.response.RegisterResponse
 import okhttp3.MultipartBody
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.Part
-import retrofit2.http.Path
 
 interface ApiService {
 
@@ -20,46 +19,19 @@ interface ApiService {
         @Field("lastName") lastName: String,
         @Field("email") email: String,
         @Field("password") password: String,
-    ) : RegisterResponse
+    ): RegisterResponse
 
     @FormUrlEncoded
     @POST("/login")
     suspend fun login(
         @Field("email") email: String,
         @Field("password") password: String,
-    ) : LoginResponse
+    ): LoginResponse
 
     @Multipart
     @POST("/predict")
     suspend fun uploadImage(
         @Part file: MultipartBody.Part
     ): PredictResponse
-
-
-
-
-
-
-  /*  //??
-    @FormUrlEncoded
-    @POST("/users/{userId}/eyeHealthRecords")
-    suspend fun records(
-        @Path("userId") userId:  String,
-        @Field("symptoms") symptoms: String,
-        @Field("diagnosis") diagnosis: String
-    )
-
-    //not finished
-    @FormUrlEncoded
-    @POST("/users/{userId}/nutritionRecommendations")
-    suspend fun nutrition(
-        @Path("userId") userId:  String,
-        @Field("symptoms") symptoms: String,
-        @Field("diagnosis") diagnosis: String
-    )
-
-    //not finished
-    @POST("/users/{userId}/eyeImages")
-    suspend fun eyeImage()*/
 
 }

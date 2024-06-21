@@ -2,7 +2,9 @@ package com.submission.eyecare.data
 
 import androidx.lifecycle.liveData
 import com.google.gson.Gson
+import com.submission.eyecare.data.local.IshiharaPlate
 import com.submission.eyecare.data.local.LoginResult
+import com.submission.eyecare.data.local.PlateData
 import com.submission.eyecare.data.local.UserDisplayName
 import com.submission.eyecare.data.network.ApiService
 import com.submission.eyecare.data.network.response.ErrorResponse
@@ -14,7 +16,10 @@ import okhttp3.MultipartBody
 import retrofit2.HttpException
 
 class UserRepos private constructor(
-    private val userPreference: UserPreference, private val api1: ApiService, private val api2: ApiService) {
+    private val userPreference: UserPreference,
+    private val api1: ApiService,
+    private val api2: ApiService
+) {
 
 
     suspend fun saveName(name: UserDisplayName) {
@@ -24,6 +29,7 @@ class UserRepos private constructor(
     fun getName(): Flow<UserDisplayName> {
         return userPreference.getName()
     }
+
     suspend fun saveSession(user: UserModel) {
         userPreference.saveSession(user)
     }
@@ -41,7 +47,7 @@ class UserRepos private constructor(
         return userPreference.getTheme()
     }
 
-    suspend fun saveTheme(isDark : Boolean) {
+    suspend fun saveTheme(isDark: Boolean) {
         userPreference.saveTheme(isDark)
     }
 
@@ -59,7 +65,7 @@ class UserRepos private constructor(
             val uid = response.user?.uid
             val name = response.user?.displayName
             emit(Result.Success(LoginResult(uid, name)))
-        } catch (e: HttpException){
+        } catch (e: HttpException) {
             val jsonString = e.response()?.errorBody()?.string()
             val errorBody = Gson().fromJson(jsonString, LoginResponse::class.java)
             val eMsg = errorBody.message.toString()
@@ -75,16 +81,22 @@ class UserRepos private constructor(
     ) = liveData {
         emit(Result.Loading)
         try {
-            val response = api1.register(firstName, lastName, email, password )
+            val response = api1.register(firstName, lastName, email, password)
             val msg = response.message
             emit(Result.Success(msg))
         } catch (e: HttpException) {
-            val eMsg : String
+            val eMsg: String
             when (e.code()) {
-                400 -> { eMsg = "Bad Request"
-                    emit(Result.Error(eMsg)) }
-                408 -> { eMsg = "Connection Problem, Try Again"
-                    emit(Result.Error(eMsg))}
+                400 -> {
+                    eMsg = "Bad Request"
+                    emit(Result.Error(eMsg))
+                }
+
+                408 -> {
+                    eMsg = "Connection Problem, Try Again"
+                    emit(Result.Error(eMsg))
+                }
+
                 else -> {
                     val jsonString = e.response()?.errorBody()?.string()
                     val errorBody = Gson().fromJson(jsonString, ErrorResponse::class.java)
@@ -95,7 +107,7 @@ class UserRepos private constructor(
         }
     }
 
-    suspend fun uploadImage(file: MultipartBody.Part):PredictResponse {
+    suspend fun uploadImage(file: MultipartBody.Part): PredictResponse {
         return api2.uploadImage(file)
     }
 
@@ -104,7 +116,11 @@ class UserRepos private constructor(
 
         @Volatile
         private var instance: UserRepos? = null
-        fun getInstance(userPreference: UserPreference, api1: ApiService, api2: ApiService): UserRepos =
+        fun getInstance(
+            userPreference: UserPreference,
+            api1: ApiService,
+            api2: ApiService
+        ): UserRepos =
             instance ?: synchronized(this) {
                 instance ?: UserRepos(userPreference, api1, api2)
             }.also { instance = it }

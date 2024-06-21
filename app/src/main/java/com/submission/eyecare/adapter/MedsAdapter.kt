@@ -7,11 +7,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.submission.eyecare.data.local.Medications
 import com.submission.eyecare.databinding.MedicationHolderBinding
-import com.submission.eyecare.ui.InfoActivity
 import com.submission.eyecare.ui.MedsActivity
 
-class MedsAdapter (var list: ArrayList<Medications>): RecyclerView.Adapter<MedsAdapter.MedsViewHolder>() {
-    inner class MedsViewHolder(private val bind: MedicationHolderBinding): RecyclerView.ViewHolder(bind.root) {
+class MedsAdapter(var list: ArrayList<Medications>) :
+    RecyclerView.Adapter<MedsAdapter.MedsViewHolder>() {
+    inner class MedsViewHolder(private val bind: MedicationHolderBinding) :
+        RecyclerView.ViewHolder(bind.root) {
         fun insert(item: Medications) {
             val overview = item.overview
             val about = item.about
@@ -20,7 +21,7 @@ class MedsAdapter (var list: ArrayList<Medications>): RecyclerView.Adapter<MedsA
             Glide.with(itemView)
                 .load(url)
                 .into(bind.icMeds)
-            bind.medsBtn.setOnClickListener{
+            bind.medsBtn.setOnClickListener {
                 val intent = Intent(it.context, MedsActivity::class.java)
                 intent.putExtra(MedsActivity.EXTRA_NAME, item.name)
                 intent.putExtra(MedsActivity.EXTRA_OVERVIEW, overview)
@@ -30,13 +31,15 @@ class MedsAdapter (var list: ArrayList<Medications>): RecyclerView.Adapter<MedsA
             }
         }
     }
+
     fun setFiltered(filteredList: ArrayList<Medications>) {
         this.list = filteredList
         notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedsViewHolder {
-        val bind = MedicationHolderBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val bind =
+            MedicationHolderBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MedsViewHolder(bind)
     }
 

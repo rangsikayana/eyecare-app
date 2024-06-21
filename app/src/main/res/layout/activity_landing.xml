@@ -48,11 +48,11 @@
         android:id="@+id/logoMenu2"
         android:layout_width="0dp"
         android:layout_height="300dp"
+        android:src="@drawable/second"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"
-        android:src="@drawable/second" />
+        app:layout_constraintVertical_bias="0.3" />
 
     <TextView
         android:id="@+id/titleMenu2"
@@ -85,11 +85,11 @@
         android:id="@+id/logoMenu3"
         android:layout_width="0dp"
         android:layout_height="300dp"
+        android:src="@drawable/third"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"
-        android:src="@drawable/third" />
+        app:layout_constraintVertical_bias="0.3" />
 
     <TextView
         android:id="@+id/titleMenu3"
@@ -98,12 +98,12 @@
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-light"
         android:gravity="center_horizontal"
+        android:text="@string/third"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/logoMenu3"
         app:layout_constraintStart_toStartOf="@+id/logoMenu3"
-        app:layout_constraintTop_toBottomOf="@+id/logoMenu3"
-        android:text="@string/third" />
+        app:layout_constraintTop_toBottomOf="@+id/logoMenu3" />
 
     <TextView
         android:id="@+id/descMenu3"
@@ -111,22 +111,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
+        android:text="@string/third_content"
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/titleMenu3"
         app:layout_constraintStart_toStartOf="@+id/titleMenu3"
-        app:layout_constraintTop_toBottomOf="@+id/titleMenu3"
-        android:text="@string/third_content" />
+        app:layout_constraintTop_toBottomOf="@+id/titleMenu3" />
 
     <ImageView
         android:id="@+id/logoMenu4"
         android:layout_width="0dp"
         android:layout_height="300dp"
+        android:src="@drawable/search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"
-        android:src="@drawable/search" />
+        app:layout_constraintVertical_bias="0.3" />
 
     <TextView
         android:id="@+id/titleMenu4"
@@ -135,12 +135,12 @@
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-light"
         android:gravity="center_horizontal"
+        android:text="@string/fourth"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/logoMenu4"
         app:layout_constraintStart_toStartOf="@+id/logoMenu4"
-        app:layout_constraintTop_toBottomOf="@+id/logoMenu4"
-        android:text="@string/fourth" />
+        app:layout_constraintTop_toBottomOf="@+id/logoMenu4" />
 
     <TextView
         android:id="@+id/descMenu4"
@@ -148,12 +148,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
+        android:text="@string/fourth_content"
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/titleMenu4"
         app:layout_constraintStart_toStartOf="@+id/titleMenu4"
-        app:layout_constraintTop_toBottomOf="@+id/titleMenu4"
-        android:text="@string/fourth_content"/>
+        app:layout_constraintTop_toBottomOf="@+id/titleMenu4" />
 
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -223,6 +223,6 @@
         android:text="@string/login"
         app:layout_constraintBottom_toTopOf="@+id/menu2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

@@ -1,12 +1,12 @@
 package com.submission.eyecare.ui.auth.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.submission.eyecare.data.UserModel
 import com.submission.eyecare.data.local.UserDisplayName
 import com.submission.eyecare.databinding.ActivityLoginBinding
@@ -26,6 +26,7 @@ class LoginActivity : AppCompatActivity() {
     private val loginViewModel: LoginViewModel by viewModels {
         VMFactory.getInstance(this)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -34,9 +35,9 @@ class LoginActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         binding.apply {
-            email =  emailEditText
+            email = emailEditText
             pass = passwordEditText
-            btnLogin.setOnClickListener{
+            btnLogin.setOnClickListener {
                 retrieve()
             }
             tvRegister.setOnClickListener {
@@ -44,6 +45,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun retrieve() {
         val emailResult = email.text.toString()
         val passResult = pass.text.toString()
@@ -55,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
     ) {
         loginViewModel.login(email, pass).observe(this) { res ->
             if (res != null) {
-                when (res){
+                when (res) {
                     is Result.Success -> {
                         val uid = res.data.uid.toString() // uid = token
                         val name = res.data.name.toString()
@@ -64,10 +66,12 @@ class LoginActivity : AppCompatActivity() {
                         isLoad(false)
                         setDialogOK()
                     }
+
                     is Result.Error -> {
                         showToast(res.error)
                         isLoad(false)
                     }
+
                     is Result.Loading -> {
                         isLoad(true)
                     }
@@ -75,6 +79,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun setDialogOK() {
         AlertDialog.Builder(this).apply {
             setTitle("Success")
@@ -89,6 +94,7 @@ class LoginActivity : AppCompatActivity() {
             show()
         }
     }
+
     private fun showToast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }

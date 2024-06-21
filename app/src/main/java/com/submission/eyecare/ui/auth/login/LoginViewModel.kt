@@ -7,7 +7,7 @@ import com.submission.eyecare.data.UserRepos
 import com.submission.eyecare.data.local.UserDisplayName
 import kotlinx.coroutines.launch
 
-class LoginViewModel (private val repo: UserRepos) : ViewModel() {
+class LoginViewModel(private val repo: UserRepos) : ViewModel() {
     fun login(email: String, password: String) = repo.login(email, password)
 
     fun saveSession(user: UserModel) {

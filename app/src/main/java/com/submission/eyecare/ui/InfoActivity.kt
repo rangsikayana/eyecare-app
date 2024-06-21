@@ -1,9 +1,8 @@
 package com.submission.eyecare.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.submission.eyecare.R
 import com.submission.eyecare.databinding.ActivityInfoBinding
 
 class InfoActivity : AppCompatActivity() {

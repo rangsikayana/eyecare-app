@@ -10,9 +10,9 @@ class ApiConfig {
     companion object {
         fun getRetrofit(baseUrl: String): Retrofit {
             val authInterceptor =
-                if(BuildConfig.DEBUG) {
+                if (BuildConfig.DEBUG) {
                     HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-                }else {
+                } else {
                     HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
                 }
             val client = OkHttpClient.Builder()

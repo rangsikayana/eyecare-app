@@ -3,7 +3,7 @@ package com.submission.test2colorblind
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.submission.eyecare.data.IshiharaPlate
+import com.submission.eyecare.data.local.IshiharaPlate
 import com.submission.eyecare.databinding.ItemPlateBinding
 
 
