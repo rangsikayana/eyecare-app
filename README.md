@@ -1,8 +1,12 @@
+# EyeCare
+See our wireframe <a href="https://www.figma.com/design/7yjvxqIIuj6zPrNkRZCxlJ/EyeCare-app?node-id=54795-2155&t=nxWxPQLLyFMWEk9I-0" title="Figma" target="_blank"><b>here</b></a>.
+
+<br>
+
 # EyeCare: Your Personal Eye Health Companion
 ## Theme: Health Innovation: Empowering
 ### Bangkit Capstone Project 2024
 
-See our wireframe <a href="https://www.figma.com/design/7yjvxqIIuj6zPrNkRZCxlJ/EyeCare-app?node-id=54795-2155&t=nxWxPQLLyFMWEk9I-0" title="Figma" target="_blank"><b>here</b></a>.
 
 **Bangkit Capstone Team ID**: C241-PS466
 
