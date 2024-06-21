@@ -3,6 +3,31 @@ See our wireframe <a href="https://www.figma.com/design/7yjvxqIIuj6zPrNkRZCxlJ/E
 
 <br>
 
+# Table of Content
+
+- [EyeCare](# EyeCare)
+- [Table of Content](#table-of-content)
+- [About Nusatala](#about-nusatala)
+  - [Background](#background)
+  - [Goal \& Aim](#goal--aim)
+  - [Installation \& Deployment](#installation--deployment)
+    - [Machine Learning - Project Installation to Personal Virtual Environment](#machine-learning---project-installation-to-personal-virtual-environment)
+    - [Deploy Machine Learning Model with CloudRun on Google Cloud Platform](#deploy-machine-learning-model-with-cloudrun-on-google-cloud-platform)
+    - [Mobile Development - Project Installation](#mobile-development---project-installation)
+    - [Cloud Computing - Backend Project Installation](#cloud-computing---backend-project-installation)
+  - [How Nusatala Works](#how-nusatala-works)
+  - [Plans \& Realization](#plans--realization)
+  - [Project Scope](#how-nusatala-works)
+  - [Bibliography](#bibliography)
+    - [A. Dataset](#a-dataset)
+    - [B. Resources](#b-resources)
+    - [C. Academic Papers](#c-academic-papers)
+  - [Presentation](#presentation)
+  - [Demo Video](#demo-video)
+  - [Developers](#developers)
+
+<br>
+
 # EyeCare: Your Personal Eye Health Companion
 ## Theme: Health Innovation: Empowering
 ### Bangkit Capstone Project 2024
